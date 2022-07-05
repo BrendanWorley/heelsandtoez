@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Fredoka-SemiBold';
+  src: url('Fredoka-SemiBold.eot');
+  src: url('Fredoka-SemiBold.eot?#iefix') format('embedded-opentype'),
+       url('Fredoka-SemiBold.svg#Fredoka-SemiBold') format('svg'),
+       url('Fredoka-SemiBold.ttf') format('truetype'),
+       url('Fredoka-SemiBold.woff') format('woff'),
+       url('Fredoka-SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
