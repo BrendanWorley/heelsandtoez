@@ -22,6 +22,19 @@
    font-weight: normal;
    font-style: normal;
  }
+
+ @font-face {
+   font-family: 'Fredoka-Regular';
+   src: url('fonts/Fredoka-Regular.eot');
+   src: url('fonts/Fredoka-Regular.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Fredoka-Regular.svg#Fredoka-Regular') format('svg'),
+        url('fonts/Fredoka-Regular.ttf') format('truetype'),
+        url('fonts/Fredoka-Regular.woff') format('woff'),
+        url('fonts/Fredoka-Regular.woff2') format('woff2');
+   font-weight: normal;
+   font-style: normal;
+ }
+ 
 /*--------------------------------------------------------------------------------------------*/
 /*------------------------------ZERO-STYLING-----------------------------------------------------*/
 * {
@@ -117,6 +130,7 @@ h6 {
 
 /*----------------------------------------MAIN PORTION--------------------------------------------*/
 wrapper {
+   width: 100vw;
    max-width: 1440px;
    min-height: 4166px;
 }
@@ -137,8 +151,54 @@ wrapper {
    max-height: 1086px;
    height: 1086px;
    background: linear-gradient(-45deg,  rgba(16, 115, 87, 1),  rgba(26, 61, 114, 1), rgba(9, 52, 66, 1));
-   /*linear-gradient (45deg, #00C5A8 25%, #6A87D3 20%, #093442);*/
+   flex-direction: column;
 }
+
+.firstScreen__frame51 {
+   max-width: 616px;
+   max-height: 295px;
+   margin: 169px auto 0 auto;
+   display: flex;
+   flex-direction: column; 
+   font-family: 'Fredoka-Regular';
+   font-size: 60px;
+   text-align: center;
+}
+
+.firstScreen__frame51__1line, .firstScreen__frame51__3line {
+   color: rgba(253, 244, 200, 1);
+}
+
+.firstScreen__frame51__2line {
+   color: rgba(129, 173, 40, 1);
+}
+
+.firstScreen__frame51__button {
+   max-width: 166px;
+   min-width: 166px;
+   max-height: 67px;
+   min-height: 67px;
+   background-color: #CD7F47;
+   font-size: 16px;
+   color: #FDF4C8;
+   padding-top: 25.5px;
+   margin-top: 21px;
+   border-radius: 33.5px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.firstScreen__lineEco__png {
+   min-width: 124.95px;
+   max-width: 124.95px;
+   min-height: 16.38px;
+   max-height: 16.38px;
+   position: relative; 
+   bottom: 211px;
+   left: 657px;
+}
+
+
 
 .header {
    min-width: 100%;
@@ -148,6 +208,9 @@ wrapper {
    flex-direction: row;
    justify-content: space-between;
    font-family: 'Fredoka-SemiBold';
+   position: fixed;
+   top: 0;
+   left: 0;
 }
 
 .header__leftMenu {
