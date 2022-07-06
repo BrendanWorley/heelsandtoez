@@ -189,7 +189,17 @@ wrapper {
 }
 
 .firstScreen__lineEco__png {
+   max-width: 124.95px;
    min-width: 124.95px;
+   min-height: 16.38px;
+   max-height: 16.38px;
+   position: relative; 
+   bottom: 211px;
+   right: 42px;
+}
+
+/* .firstScreen__lineEco__png {
+      min-width: 124.95px;
    max-width: 124.95px;
    min-height: 16.38px;
    max-height: 16.38px;
@@ -197,7 +207,7 @@ wrapper {
    bottom: 211px;
    left: 657px;
 }
-
+ */
 
 
 .header {
