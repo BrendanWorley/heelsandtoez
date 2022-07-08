@@ -152,6 +152,7 @@ wrapper {
    height: 1086px;
    background: linear-gradient(-45deg,  rgba(16, 115, 87, 1),  rgba(26, 61, 114, 1), rgba(9, 52, 66, 1));
    flex-direction: column;
+   position: relative;
 }
 
 .firstScreen__frame51 {
@@ -198,17 +199,127 @@ wrapper {
    right: 42px;
 }
 
-/* .firstScreen__lineEco__png {
-      min-width: 124.95px;
-   max-width: 124.95px;
-   min-height: 16.38px;
-   max-height: 16.38px;
+.firstScreen__turtle__png {
+   max-width: 547px;
+   min-width: 547px;
+   min-height: 583px;
+   max-height: 583px;
    position: relative; 
-   bottom: 211px;
-   left: 657px;
+   bottom: 148px;
+   right: 48px;
+   z-index: 2;
 }
- */
 
+.firstScreen__flowers {
+   max-width: 100%;
+   min-width: 100%;
+   min-height: 959.38px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.firstScreen__flowers__flower1 {
+   min-width: 330px;
+   min-height: 717.19px;
+   margin-top: 130px;
+   margin-left: 28px;
+
+   
+}
+
+.firstScreen__flowers__flower1__png {
+   max-width: 330px;
+   min-width: 330px;
+   max-height: 770.19px;
+   min-height: 770.19px;
+
+}
+
+.firstScreen__flowers__flower2 {
+   min-width: 417px;
+   min-height: 849px;
+   padding-right: 49px;
+   padding-top: 231px;
+
+}
+
+.firstScreen__flowers__flower2__png {
+   max-width: 417px;
+   min-width: 417px;
+   max-height: 849px;
+   min-height: 849px;
+   
+}
+
+.firstScreen__flowers__stones {
+   position: absolute;
+   bottom: 0;
+   right: 287.17px;
+   min-width: calc(545.83px + 26px + 480px);
+   min-height: 309.46px;
+   max-width: calc(545.83px + 26px + 480px);
+   max-height: 309.46px;
+   display: flex;
+   z-index: 1;
+
+}
+
+.firstScreen__flowers__stones__stone1 {
+   max-width: 545.83px;
+   min-width: 545.83px;
+   max-height: 309.46px;
+   min-height: 309.46px;
+   position: relative;
+   
+}
+
+.firstScreen__flowers__stones__stone1_padding {
+   max-width: 545.83px;
+   min-width: 545.83px;
+   max-height: 309.46px;
+   min-height: 309.46px;
+}
+
+.firstScreen__flowers__stones__stone1_shoeColored {
+   max-width: 470px;
+   min-width: 470px;
+   max-height: 240px;
+   min-height: 240px;
+   position: absolute;
+   bottom: 0;
+   left: 62px;
+
+}
+
+.firstScreen__flowers__stones__stone2 {
+   max-width: 480px;
+   min-width: 480px;
+   max-height: 272px;
+   min-height: 272px;
+   margin-top: 37.45px;
+}
+
+.firstScreen__flowers__stones__stone2_padding {
+   max-width: 480px;
+   min-width: 480px;
+   max-height: 272px;
+   min-height: 272px;
+}
+
+.firstScreen__flowers__stones__stone1_shoeGreen {
+   max-width: 360px;
+   min-width: 360px;
+   max-height: 227px;
+   min-height: 227px;
+   position: absolute;
+   bottom: 0;
+   right: 105px;
+
+}
 
 .header {
    min-width: 100%;
@@ -221,6 +332,7 @@ wrapper {
    position: fixed;
    top: 0;
    left: 0;
+   z-index: 10;
 }
 
 .header__leftMenu {
@@ -247,6 +359,13 @@ wrapper {
    margin-top: 35.5px;
 }
 
+/* -----------------TESTING-------------------------------------- */
+.link {
+   justify-content: space-between;
+   font-size: 14px;
+   color: #FDF4C8;
+}
+/* ---------------------------------------------------------------------- */
 .header__mainLogo {
    display: flex;
    flex-wrap: row;
