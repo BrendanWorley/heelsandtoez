@@ -137,11 +137,12 @@ wrapper {
 
 .container {
    overflow: auto;
-   min-width: 100%;
+   width: 100%;
    min-height: 100%;
-   max-width: 100%;
+   max-width: 1440px;
    display: flex;
    flex-direction: column;
+   margin: 0 auto;
 }
 
 .firstScreen {
@@ -164,14 +165,18 @@ wrapper {
    font-family: 'Fredoka-Regular';
    font-size: 60px;
    text-align: center;
+   z-index: 13;
+   
 }
 
 .firstScreen__frame51__1line, .firstScreen__frame51__3line {
    color: rgba(253, 244, 200, 1);
+   z-index: 9;
 }
 
 .firstScreen__frame51__2line {
    color: rgba(129, 173, 40, 1);
+   z-index: 9;
 }
 
 .firstScreen__frame51__button {
@@ -187,7 +192,13 @@ wrapper {
    border-radius: 33.5px;
    margin-left: auto;
    margin-right: auto;
+   position: absolute;
+   bottom: 650px;
+   left: calc((100% - 166px) / 2);
+   z-index: 1000;
+   
 }
+
 
 .firstScreen__lineEco__png {
    max-width: 124.95px;
@@ -195,8 +206,9 @@ wrapper {
    min-height: 16.38px;
    max-height: 16.38px;
    position: relative; 
-   bottom: 211px;
+   bottom: 122px;
    right: 42px;
+   z-index: 1;
 }
 
 .firstScreen__turtle__png {
@@ -205,14 +217,16 @@ wrapper {
    min-height: 583px;
    max-height: 583px;
    position: relative; 
-   bottom: 148px;
+   bottom: 60px;
    right: 48px;
-   z-index: 2;
+   z-index: 1;
+   /* display: none; */
 }
 
 .firstScreen__flowers {
-   max-width: 100%;
+   width: 100%;
    min-width: 100%;
+   max-width: 1440px;
    min-height: 959.38px;
    position: absolute;
    left: 0;
@@ -220,6 +234,8 @@ wrapper {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   z-index: 10;
+   
 }
 
 .firstScreen__flowers__flower1 {
@@ -234,8 +250,8 @@ wrapper {
 .firstScreen__flowers__flower1__png {
    max-width: 330px;
    min-width: 330px;
-   max-height: 770.19px;
-   min-height: 770.19px;
+   height: 717.19px;
+   min-height: 717.19px;
 
 }
 
@@ -258,13 +274,14 @@ wrapper {
 .firstScreen__flowers__stones {
    position: absolute;
    bottom: 0;
-   right: 287.17px;
-   min-width: calc(545.83px + 26px + 480px);
+   left: 7%;
+   width: 73%;
+   /* min-width: calc(545.83px + 26px + 480px); */
    min-height: 309.46px;
    max-width: calc(545.83px + 26px + 480px);
    max-height: 309.46px;
    display: flex;
-   z-index: 1;
+   
 
 }
 
@@ -322,44 +339,51 @@ wrapper {
 }
 
 .header {
-   min-width: 100%;
-   max-width: 100%;
+   width: 100%;
+   max-width: 1440px;
    max-height: 67px;
+   height: 6.2%;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    font-family: 'Fredoka-SemiBold';
    position: fixed;
    top: 0;
-   left: 0;
-   z-index: 10;
+   left: calc((100vw - 100%) / 2);
+   z-index: 15;
 }
 
 .header__leftMenu {
-   min-width: 313px;
-   min-height: 17px;
+   width: 22%;
+   max-width: 313px;
+   height: 2%;
+   max-height: 17px;
+   /* min-height: 17px; */
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    font-size: 14px;
    color: #FDF4C8;
-   margin-left: 112px;
-   margin-top: 35.5px;
+   margin-left: 7.8%;
+   /* margin-left: 112px; */
+   margin-top: 2.43%;
+   
 }
 
 .header__rightMenu {
-   min-width: 295px;
-   min-height: 17px;
+   width: 20.4%;
+   /* min-width: 295px; */
+   max-height: 17px;
    display: flex;
    flex-direction: row;
    justify-content: space-between;
    font-size: 14px;
    color: #FDF4C8;
-   margin-right: 112px;
-   margin-top: 35.5px;
+   margin-right: 7.8%;
+   margin-top: 2.43%;
 }
 
-/* -----------------TESTING-------------------------------------- */
+/* -----------------TEMPORARY LINK-------------------------------------- */
 .link {
    justify-content: space-between;
    font-size: 14px;
@@ -369,14 +393,17 @@ wrapper {
 .header__mainLogo {
    display: flex;
    flex-wrap: row;
-   margin-top: 15px;
-   min-height: 67px;
+   margin-top: 1.05%;
+   min-height: 100%;
+   
+   /* min-height: 67px; */
 
 }
 
 .header__mainLogo__logoSmall1 {
-   min-width: 67px;
-   min-height: 53px;
+   max-width: 53px;
+   max-height: 67px;
+   
 }
 
 .header__mainLogo__mainTitle {
@@ -387,4 +414,34 @@ wrapper {
    margin-top: 24px;
 }
 
+/*-----------------------------------------------------------------------------------------------*/
+
+/*-------------------------AT RESOLUTION MORE THAN 1440px----------------------------------------*/
+@media (min-width: 1440px) {
+   .header {
+      left: calc((100vw - 1440px) / 2);
+   }
+   
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+/*------------------------------AT THE RESOLUTION LESS THAN 1440px-------------------------------*/
+@media (max-width: 1400px) {
+   .firstScreen__flowers__stones {
+      left: calc((100vw - 545.825px) / 2);
+   }
+   .firstScreen__flowers__stones__stone2, .firstScreen__flowers__flower1, .firstScreen__flowers__flower2 {
+      display: none;
+   }
+}
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*-----------------------AT RESOLUTION LESS THAN 800px-------------------------------------------*/
+@media (max-width: 800px) {
+   .header__leftMenu, .header__rightMenu {
+   font-size: 4px;
+   width: 25%;
+   }
+}
 /*-----------------------------------------------------------------------------------------------*/
