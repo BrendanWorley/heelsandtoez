@@ -379,6 +379,10 @@ wrapper {
    justify-content: space-between;
    font-size: 14px;
    color: #FDF4C8;
+   text-shadow: 1px 0 1px rgba(26, 61, 114, 1), 
+   0 1px 1px rgba(26, 61, 114, 1), 
+   -1px 0 1px rgba(26, 61, 114, 1), 
+   0 -1px 1px rgba(26, 61, 114, 1);
    margin-left: 7.8%;
    /* margin-left: 112px; */
    margin-top: 2.43%;
@@ -394,6 +398,10 @@ wrapper {
    justify-content: space-between;
    font-size: 14px;
    color: #FDF4C8;
+   text-shadow: 1px 0 1px rgba(26, 61, 114, 1), 
+   0 1px 1px rgba(26, 61, 114, 1), 
+   -1px 0 1px rgba(26, 61, 114, 1), 
+   0 -1px 1px rgba(26, 61, 114, 1);
    margin-right: 7.8%;
    margin-top: 2.43%;
 }
@@ -427,6 +435,10 @@ wrapper {
    min-width: 138px;
    min-height: 31px;
    color: #FDF4C8;
+   text-shadow: 1px 0 1px rgba(26, 61, 114, 1), 
+   0 1px 1px rgba(26, 61, 114, 1), 
+   -1px 0 1px rgba(26, 61, 114, 1), 
+   0 -1px 1px rgba(26, 61, 114, 1);
    font-size: 26px;
    margin-top: 24px;
 }
