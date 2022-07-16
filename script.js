@@ -52,6 +52,13 @@ function clickHandler() {
    console.log(order);
    console.log(this.dataset);
    activeOrder = order;
+   //----implementing infinity effect------------
+   if (activeOrder === slides.length - 1) {
+      activeOrder = 1;
+   } else if (activeOrder === 0) {
+      activeOrder = slides.length - 2;
+   }
+   //-------------------------------------------
    update();
 }
 
@@ -63,6 +70,13 @@ function navigationHandler() {
    } else if (dir === 'next') {
       activeOrder = Math.min(slides.length - 1, activeOrder + 1);
    }
+   //----implementing infinity effect------------
+   if (activeOrder === slides.length - 1) {
+      activeOrder = 1;
+   } else if (activeOrder === 0) {
+      activeOrder = slides.length - 2;
+   }
+   //-------------------------------------------
    update();
 }
 
