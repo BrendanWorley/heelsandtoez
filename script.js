@@ -20,12 +20,12 @@ function init() {
 
       slide.dataset.order = i;
       slide.style.transform = "translateX(-`${initShift}%)";
-      console.log(initShift);
+      /* console.log(initShift); */
       slide.addEventListener('click', clickHandler);
    }   
 
    if (container.clientWidth < 1218) {
-      initPos = 23; 
+      initPos = 110; 
    } else {
       initPos = 3.4;
    }
@@ -45,24 +45,24 @@ function update() {
    const { width, height } = container.getBoundingClientRect();
    
    if (container.clientWidth < 1218) {
-      initPos = 23; 
+      initPos = 110; 
    } else {
       initPos = 3.4;
    }
-   console.log(initPos);
+   /* console.log(initPos); */
 
    for (let i = 0; i < slides.length; i++) {
       const leftSlide = document.querySelector(`.slide[data-order="${activeOrder - i}"]`);
       const centerSlide = document.querySelector(`.slide[data-order="${activeOrder}"]`);
 
       if (leftSlide) {
-         leftSlide.style.left = `${width / initPos - i * 450}px`;
+         leftSlide.style.left = `${width / initPos - i * 440}px`;
          leftSlide.style.transform = "scale(0.69)";
       }
 
       const rightSlide = document.querySelector(`.slide[data-order="${activeOrder + i}"]`);
       if (rightSlide) {
-         rightSlide.style.left = `${width / initPos + i * 450}px`;
+         rightSlide.style.left = `${width / initPos + i * 440}px`;
          rightSlide.style.transform = "scale(0.69)";
       }
 
@@ -87,7 +87,7 @@ function clickHandler() {
 
 function navigationHandler() {
    const { dir } = this.dataset;
-   console.log(this.dataset);
+   /* console.log(this.dataset); */
    if (dir === 'prev') {
       activeOrder = Math.max(0, activeOrder - 1);
    } else if (dir === 'next') {
