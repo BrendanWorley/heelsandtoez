@@ -359,16 +359,20 @@ wrapper {
 .header {
    width: 100%;
    max-width: 1440px;
-   max-height: 67px;
-   height: 6.2%;
+   min-height: 67px;
+   /* height: 6.2%; */
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   align-items: ce;
    font-family: 'Fredoka-SemiBold';
    position: fixed;
    top: 0;
-   left: calc((100vw - 100%) / 2);
+   left: 0; /* calc((100vw - 100%) / 2); */
    z-index: 15;
+   background: linear-gradient(-45deg,  /* rgba(16, 115, 87, 1), */  rgba(26, 61, 114, 1) 13%, rgba(9, 52, 66, 1));
+   transform: translateX(-8px);
+   
 }
 
 .header__leftMenu {
@@ -389,6 +393,7 @@ wrapper {
    margin-left: 7.8%;
    /* margin-left: 112px; */
    margin-top: 2.43%;
+   margin-bottom: 2.43%;
    
 }
 
@@ -407,6 +412,7 @@ wrapper {
    0 -1px 1px rgba(26, 61, 114, 1);
    margin-right: 7.8%;
    margin-top: 2.43%;
+   margin-bottom: 2.43%;
 }
 
 /* -----------------TEMPORARY LINK-------------------------------------- */
@@ -421,6 +427,7 @@ wrapper {
    flex-wrap: row;
    margin-top: 1.05%;
    min-height: 100%;
+   padding-bottom: 8px;
    
    
    /* min-height: 67px; */
@@ -517,6 +524,8 @@ wrapper {
    margin-top: 5%;
    margin-right: auto;
    margin-left: auto;
+   background-image: url("images/video_screenshot.png");
+   object-fit: fill;
 }
 
 .editorial__upper__turtle {
@@ -748,6 +757,160 @@ wrapper {
    height: 100%;
 }
 
+.rect24 {
+   width: 100%;
+   max-width: 1440px;
+   min-height: 620px;
+   background-color: rgba(253, 244, 200, 1);
+   padding-bottom: 52px;
+}
+
+.rect24__frame118 {
+   max-width: 1224px;
+   /* width: 1224px; */
+   /* height: 524px; */
+   margin-top: 56px;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.rect24__frame118__header {
+   max-width: 550px;
+   font-family: 'Fredoka-Medium';
+   font-size: 40px;
+   margin: 0 auto;
+}
+
+.rect24__frame118__group1 {
+   width: 100%;
+   margin-top: 32px;
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.rect24__frame118__group1_item {
+   width: 392px;
+   min-height: 356px;
+   background-color: rgba(230, 230, 230, 1);
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 82px;
+   padding-bottom: 66px;
+}
+
+
+.avatar {
+   max-width: 100px;
+   max-height: 100px;
+   margin-top: -50px;
+   border-radius: 50%;  
+}
+
+.avatar_quotes {
+   max-width: 32px;
+   max-height: 32px;
+   margin-top: 20px;
+}
+
+.avatar_text1 {
+   font-family: 'Fredoka-Regular';
+   font-size: 16px;
+   color: rgba(69, 69, 69, 1);
+   margin-top: 28px;
+   max-width: 340px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.avatar_text2 {
+   font-family: 'Poppins-SemiBold';
+   font-size: 20px;
+   color: rgba(106, 135, 211, 1);
+   margin-top: 28px; 
+}
+
+.avatar_text3 {
+   font-family: 'Fredoka-Regular';
+   font-size: 16px;
+   color: rgba(205, 127, 71, 1);
+   margin-top: 12px;
+}
+
+.contactUs {
+   width: 100%;
+   min-height: 631px;
+   background-color: rgba(253, 244, 200, 1);
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+}
+
+.getInTouch {
+   max-width: 576px;
+   min-height: 550px;
+   padding-bottom: 151px;
+   padding-top: 12px;
+   margin-left: 112px;
+}
+
+h1 {
+   font-family: 'Fredoka-Medium';
+   font-size: 48px;
+   color: rgba(45, 45, 45, 1);
+   padding-top: 98px;
+}
+
+.getInTouch__text {
+   font-family: 'Fredoka-Regular';
+   font-size: 18px;
+   padding-top: 12px;
+   padding-bottom: 76px;
+   padding-right: 25px;
+}
+
+.getInTouch__bottom {
+   max-width: 576px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+h2 {
+   font-family: 'Fredoka-Semibold';
+   font-size: 16px;
+   padding-top: 28px;
+}
+
+h3 {
+   font-family: 'Fredoka-Regular';
+   font-size: 18px;
+   padding-top: 16px;
+}
+
+.getInTouch__bottom__item {
+   width: 288px;
+   padding-right: 72px;
+}
+
+.contactUs_turtle {
+   height: 100%;
+   width: 193px;
+   padding-right: 31px;
+   padding-top: 17px;
+   margin: 0 auto;
+   flex-shrink: 0.5;
+}
+
+.contactUs_turtle_png {
+   max-height: 204px;
+}
+
 /*----------------------------------------------------------------------------------------------*/
    
 /*-----------------------------------------------------------------------------------------------*/
@@ -800,6 +963,10 @@ wrapper {
       left: 13%;
       bottom: 190px;
       transition: all 0.5s ease-in-out;
+   }
+
+   .header {
+      width: 100vw;
    }
 }
 /*-----------------------------------------------------------------------------------------------*/
@@ -925,6 +1092,10 @@ wrapper {
    flex-direction: column;
    align-items: center;
    min-height: 90px;
+   }
+
+   .avatar_text1, .avatar_text2, .avatar_text3 {
+      font-size: 30px;
    }
 
 }
