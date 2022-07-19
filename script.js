@@ -1,3 +1,14 @@
+//----labes for email feedback form--------------------
+const firstName = document.getElementById('contactUs_frame182_name');
+firstName.value = 'Name';
+const lastName = document.getElementById('contactUs_frame182_lastName');
+lastName.value = 'Last Name';
+const email = document.getElementById('contactUs_frame182_email');
+email.value = 'Email';
+const message = document.getElementById('contactUs_frame182_message');
+message.value = 'Message';
+//---------------------------------------------------
+
 const slider = document.querySelector('.slider');
 const container = document.querySelector('.slider_container');
 const slides = document.querySelectorAll('.slide');

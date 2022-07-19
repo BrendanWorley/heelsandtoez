@@ -547,6 +547,7 @@ wrapper {
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 48px;
+   margin-top: 61px;
    font-family: 'Fredoka-Regular';
    font-size: 16px;
    display: flex;
@@ -850,14 +851,17 @@ wrapper {
    display: flex;
    flex-wrap: wrap;
    flex-direction: row;
+   justify-content: space-between;
+   padding-left: 112px;
+   padding-right: 112px;
 }
 
 .getInTouch {
-   max-width: 576px;
-   min-height: 550px;
+   max-width: 565px;
+   min-height: 430px;
    padding-bottom: 151px;
    padding-top: 12px;
-   margin-left: 112px;
+   /* margin-left: 112px; */
 }
 
 h1 {
@@ -876,7 +880,7 @@ h1 {
 }
 
 .getInTouch__bottom {
-   max-width: 576px;
+   max-width: 565px;
    display: flex;
    flex-wrap: wrap;
 }
@@ -894,16 +898,16 @@ h3 {
 }
 
 .getInTouch__bottom__item {
-   width: 288px;
+   width: 280px;
    padding-right: 72px;
 }
 
 .contactUs_turtle {
-   height: 100%;
-   width: 193px;
+   min-height: 100%;
+   width: 162px;
    padding-right: 31px;
    padding-top: 17px;
-   margin: 0 auto;
+   margin-top: 0;
    flex-shrink: 0.5;
 }
 
@@ -911,6 +915,71 @@ h3 {
    max-height: 204px;
 }
 
+.contactUs_frame182 {
+   max-width: 488px;
+   height: 553px;
+   /* margin-right: 112px; */
+   font-family: 'Fredoka-Regular';
+   font-size: 16px;
+   color: rgba(69, 69, 69, 1);
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 82px;
+}
+
+.contactUs_form {
+   border: 1px solid rgba(205, 127, 71, 1);
+   background-color: rgba(230, 230, 230, 1);
+   border-radius: 8px;
+   max-width: 488px;
+   
+   max-height: 64px;
+   padding-left: 23px;
+   margin-top: 12px;
+}
+
+#contactUs_frame182_name {
+   max-width: 240px;
+   width: 240px;
+   margin-right: 8px;
+   margin-top: 12px;
+}
+#contactUs_frame182_lastName {
+   max-width: 240px;
+   width: 240px;
+   margin-top: 12px;
+}
+
+#contactUs_frame182_message {
+   min-height: 217px;
+   overflow: auto;
+   padding: 23px;
+   width: 100%;
+   margin-top: 12px;
+}
+
+#contactUs_frame182_email {
+   width: 100%;
+   margin-top: 12px;
+}
+
+.contactUs_frame182_sendButton {
+   width: 166px;
+   height: 64px;
+   background-color: rgba(205, 127, 71, 1);
+   color: rgba(253, 244, 200, 1);
+   border-radius: 32px;
+   font-family: 'Fredoka-SemiBold';
+   font-size: 16px;
+   padding-left: 56px;
+   padding-top: 24px;
+   margin-left: 322px;
+   margin-top: 0;
+   
+   
+
+
+}
 /*----------------------------------------------------------------------------------------------*/
    
 /*-----------------------------------------------------------------------------------------------*/
@@ -925,6 +994,8 @@ h3 {
       position: absolute;
    left: calc((1440px - 696px) / 2);
    }
+
+   
 
 
 }
@@ -968,6 +1039,10 @@ h3 {
    .header {
       width: 100vw;
    }
+   
+   .contactUs_turtle {
+      display: none;
+   }
 }
 /*-----------------------------------------------------------------------------------------------*/
 /*---------------------------------AT THE RESOLUTION LESS THAN 1300px----------------------------*/
@@ -998,6 +1073,19 @@ h3 {
    .galery_ellipse5, .galery_ellipse13, .galery_ellipse11  {
       opacity: 0;
    } 
+
+   
+   
+   h1 {
+      padding-top: 0;
+   }
+
+   .getInTouch {
+      padding-bottom: 0;
+   }
+   .getInTouch__text {
+      padding-bottom: 30px;
+   }
 
    
 
@@ -1034,6 +1122,10 @@ h3 {
     
       bottom: 0;
       
+   }
+
+   #contactUs_frame182 {
+      margin-right: 0;
    }
 
 }
@@ -1080,22 +1172,46 @@ h3 {
       min-width: 250px;
       left: calc(((100% - 200px) / 2) - 25px);
    }
+
+   .editorial__frame81 {
+      margin-top: 161px;
+   }
    
+   .header__leftMenu, .header__rightMenu {
+      font-size: 4px;
+      width: 25%;
+      flex-direction: column;
+      align-items: center;
+      min-height: 90px;
+      }
 
 }
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------AT RESOLUTION LESS THAN 800px-------------------------------------------*/
 @media (max-width: 800px) {
-   .header__leftMenu, .header__rightMenu {
-   font-size: 4px;
-   width: 25%;
-   flex-direction: column;
-   align-items: center;
-   min-height: 90px;
-   }
+   
 
    .avatar_text1, .avatar_text2, .avatar_text3 {
       font-size: 30px;
+   }
+
+   .editorial__frame81 {
+      margin-top: 161px;
+   }
+
+   #contactUs_frame182_name {
+      
+      min-width: 488px;
+      
+   }
+   #contactUs_frame182_lastName {
+      min-width: 488px;
+   }
+
+   .editorial__upper__center__header {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
    }
 
 }
