@@ -155,6 +155,7 @@ wrapper {
    display: flex;
    flex-direction: column;
    margin: 0 auto;
+   overflow-x: hidden;
 }
 
 .firstScreen {
@@ -372,6 +373,7 @@ wrapper {
    z-index: 15;
    background: linear-gradient(-45deg,  /* rgba(16, 115, 87, 1), */  rgba(26, 61, 114, 1) 13%, rgba(9, 52, 66, 1));
    transform: translateX(-8px);
+   
    
 }
 
@@ -861,6 +863,8 @@ wrapper {
    min-height: 430px;
    padding-bottom: 151px;
    padding-top: 12px;
+   margin-left: auto;
+   margin-right: auto;
    /* margin-left: 112px; */
 }
 
@@ -925,6 +929,8 @@ h3 {
    display: flex;
    flex-wrap: wrap;
    margin-top: 82px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .contactUs_form {
@@ -971,15 +977,24 @@ h3 {
    border-radius: 32px;
    font-family: 'Fredoka-SemiBold';
    font-size: 16px;
-   padding-left: 56px;
-   padding-top: 24px;
+   padding-left: 0px;
+   padding-top: 0px;
    margin-left: 322px;
    margin-top: 0;
-   
-   
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   justify-content: center;
+   }
 
-
-}
+   #labelSend {
+      max-width: 50px;
+      margin-right: 20px;
+   }
+   #arrowSend {
+      max-width: 24px;
+      max-height: 24px;
+   }
 /*----------------------------------------------------------------------------------------------*/
    
 /*-----------------------------------------------------------------------------------------------*/
@@ -1031,15 +1046,23 @@ h3 {
       transition: all 0.5s ease-in-out;
    }
    .action-prev {
-      left: 13%;
+      left: 11.5%;
       bottom: 190px;
       transition: all 0.5s ease-in-out;
    }
 
    .header {
       width: 100vw;
+      left: 0;
+      transform: translateX(+8px);
    }
    
+   .contactUs {
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+
    .contactUs_turtle {
       display: none;
    }
@@ -1082,9 +1105,16 @@ h3 {
 
    .getInTouch {
       padding-bottom: 0;
+      text-align: center;
    }
    .getInTouch__text {
       padding-bottom: 30px;
+   }
+
+   .getInTouch__bottom__item {
+      padding-right: 0;
+      margin-left: auto;
+      margin-right: auto;
    }
 
    
@@ -1116,11 +1146,13 @@ h3 {
    .action-next {
     
       bottom: 0;
+      right: 30%;
       
    }
    .action-prev {
     
       bottom: 0;
+      left: 30%;
       
    }
 
