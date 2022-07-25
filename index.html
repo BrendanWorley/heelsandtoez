@@ -17,7 +17,7 @@
                   <li><a class="link" href="https://harper-bv.github.io/velor" target="_blank">SERVISCES</a></li>
                </ul>
                <div class="header__mainLogo">
-                  <img class="header__mainLogo__logoSmall1" src="images/logo-small1.png">
+                  <!-- <img class="header__mainLogo__logoSmall1" src="images/logo-small1.png"> -->
                   <div class="header__mainLogo__mainTitle">
                      <p>Heels and Toez</p>
                   </div>
@@ -240,16 +240,18 @@
             <div class="contactUs_turtle">
                <img class="contactUs_turtle_png" src="images/contactUs_turtle.png">
             </div>
-            <form class="contactUs_frame182" action="#" enctype="application/x-www-form-urlencoded" feedback" method="post" accept-charset="UTF-8">
-               <input class="contactUs_form" id="contactUs_frame182_name" type="text">
-               <input class="contactUs_form" id="contactUs_frame182_lastName" type="text">
-               <input class="contactUs_form" id="contactUs_frame182_email" type="email">
-               <textarea class="contactUs_form" id="contactUs_frame182_message" type="text" rows="14" wrap="soft"></textarea>
+            <div class="form">
+            <form action="send.php" enctype="multipart/form-data" method="POST" name="form" id="form" class="contactUs_frame182">
+               <input placeholder="your first name" name="name" class="contactUs_form form__input _req" id="contactUs_frame182_name" type="text">
+               <input placeholder="input last name" name="lastName" class="contactUs_form form__input" id="contactUs_frame182_lastName" type="text">
+               <input placeholder="your email" name="email" class="contactUs_form form__input _req _email" id="contactUs_frame182_email" type="text">
+               <textarea placeholder="type your message here" name="message" class="contactUs_form form__input" id="contactUs_frame182_message" type="text" rows="14" wrap="soft"></textarea>
                <div class="contactUs_frame182_sendButton">
-                  <p id="labelSend">SEND </p>
+                  <p id="labelSend"><input id="insertSend" value="SEND" type="submit"/></p>
                   <img id="arrowSend" src="images/arrow_left_md.png">
                </div>
             </form>
+            </div>
          </div>
       </container>
    </wrapper>

@@ -1,14 +1,11 @@
-//----labes for email feedback form--------------------
-const firstName = document.getElementById('contactUs_frame182_name');
-firstName.value = 'Name';
-const lastName = document.getElementById('contactUs_frame182_lastName');
-lastName.value = 'Last Name';
-const email = document.getElementById('contactUs_frame182_email');
-email.value = 'Email';
-const message = document.getElementById('contactUs_frame182_message');
-message.value = 'Message';
-//---------------------------------------------------
 
+//---------------SEND BUTTON STYLING----------------------
+/* const labelSend = document.getElementById('labelSend');
+labelSend.style.color = 'rgba(253, 244, 200, 1)';
+labelSend.style.backgroundColor = '#CD7F47'; */
+//--------------------------------------------------------
+
+//--------------------SLIDER -------------------------------
 const slider = document.querySelector('.slider');
 const container = document.querySelector('.slider_container');
 const slides = document.querySelectorAll('.slide');
@@ -17,10 +14,6 @@ const initShift = 50;
 let initPos = 3.4;
 
 visualViewport.addEventListener('resize', update);
-
-/* if (container.clientWidth < 1218) {
-   initPos = 23; 
-} */
 
 
 init();
@@ -92,13 +85,13 @@ function clickHandler() {
    } else if (activeOrder === 0) {
       activeOrder = slides.length - 2;
    }
-   //-------------------------------------------
+   //--------------------------------------------
    update();
 }
 
 function navigationHandler() {
    const { dir } = this.dataset;
-   /* console.log(this.dataset); */
+   
    if (dir === 'prev') {
       activeOrder = Math.max(0, activeOrder - 1);
    } else if (dir === 'next') {
@@ -113,4 +106,62 @@ function navigationHandler() {
    //-------------------------------------------
    update();
 }
+//--------------------------------------------------------------------------------------------------------
 
+//------------------------------FEEDBACK EMAIL FORM VALIDATION -------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+   const form = document.getElementById('form');
+   form.addEventListener('submit', formSend);
+
+   async function formSend(e) {
+      e.preventDefault();
+      let error = formValidate(form);
+      
+      if (error === 0) {
+         e.target.submit();       
+      } else {
+         alert('Fill the required form fields please.')
+      }
+   }
+
+   function formValidate(form) {
+      let error = 0;
+      let formReq = document.querySelectorAll('._req');
+      console.log(formReq.length);
+      
+      for (let index = 0; index < formReq.length; index++) {
+         const input = formReq[index];
+         formRemoveError(input);
+
+         if (input.classList.contains('_email')) {
+            if (emailTest(input)) {
+               formAddError(input);
+               error++;
+            }
+         } else {
+            if (input.value === '') {
+               formAddError(input);
+               error++;
+            }
+         }
+
+      }
+      return error;
+   }
+      
+   function formAddError(input) {
+      input.parentElement.classList.add('_error');
+      input.classList.add('_error');
+   }
+   function formRemoveError(input) {
+      input.parentElement.classList.remove('_error');
+      input.classList.remove('_error');
+   }
+   //email place function--------------------------
+   function emailTest(input) {
+      return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+   }
+
+   });
+
+  

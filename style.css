@@ -438,25 +438,36 @@ wrapper {
 
 }
 
-.header__mainLogo__logoSmall1 {
+/* .header__mainLogo__logoSmall1 {
    max-width: 53px;
    min-width: 53px;
    max-height: 67px;
    min-height: 67px;
    
-}
+} */
 
 .header__mainLogo__mainTitle {
    min-width: 138px;
-   min-height: 31px;
+   min-height: 70px; /* 31px; */
    color: #FDF4C8;
    text-shadow: 1px 0 1px rgba(26, 61, 114, 1), 
    0 1px 1px rgba(26, 61, 114, 1), 
    -1px 0 1px rgba(26, 61, 114, 1), 
    0 -1px 1px rgba(26, 61, 114, 1);
    font-size: 26px;
-   margin-top: 24px;
+   /* margin-top: 24px; */
    text-align: center;
+   display: inline-flex;
+   align-items: center;
+}
+
+
+
+.header__mainLogo__mainTitle::before {
+   content: url("images/logo-small2.png");
+   width: 53px;
+   height: 67px;
+   
 }
 
 .editorial {
@@ -964,6 +975,7 @@ h3 {
    padding: 23px;
    width: 100%;
    margin-top: 12px;
+   resize: none;
 }
 
 #contactUs_frame182_email {
@@ -989,14 +1001,47 @@ h3 {
    justify-content: center;
    }
 
+   
+   
+   .contactUs_frame182_sendButton:active {
+      top: 3px;
+      box-shadow: 0 2px rgba(205, 127, 71, 1);
+      transform: scale(0.92);
+   }
+
+   .contactUs_form {
+      transition: all 0.5s ease 0s;
+   }
+   
+   .contactUs_form:focus {
+      box-shadow: 0 0 15px rgba(205, 127, 71, 1);
+   }
+
    #labelSend {
       max-width: 50px;
       margin-right: 20px;
+      background-color: rgba(205, 127, 71, 1);
+      color: rgba(253, 244, 200, 1);
+      font-family: 'Fredoka-SemiBold';
+      font-size: 16px;
    }
+
+   #insertSend {
+      background-color: rgba(205, 127, 71, 1);
+      color: rgba(253, 244, 200, 1);
+      cursor: pointer;
+   }
+
    #arrowSend {
       max-width: 24px;
       max-height: 24px;
    }
+
+/*---------------------FEEDBACK EMAIL FORM VALIDATION------------------------------------------*/
+.form__input._error {
+   box-shadow: 0 0 15px red;
+}
+/*---------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------*/
    
 /*-----------------------------------------------------------------------------------------------*/
