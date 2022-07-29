@@ -21,9 +21,9 @@ init();
 function init() {
    for (let i = 0; i < slides.length; i++) {
       const slide = slides[i];
-
+      
       slide.dataset.order = i;
-      slide.style.transform = "translateX(-`${initShift}%)";
+      slide.style.transform = "translateX(-`${initShift}%`)";
       /* console.log(initShift); */
       slide.addEventListener('click', clickHandler);
    }   
@@ -38,7 +38,7 @@ function init() {
       navigation.addEventListener('click', navigationHandler);
    }
 
-   activeOrder = Math.floor(slides.length /2);
+   activeOrder = Math.floor(slides.length / 2);
 
 
 
@@ -76,17 +76,20 @@ function update() {
 }
 
 function clickHandler() { 
-   const order = parseInt(this.dataset.order, slides.length);
-   
+   const order = parseInt(this.dataset.order);
+   /* console.log(this.dataset.order); */
    activeOrder = order;
    //----implementing infinity effect------------
    if (activeOrder === slides.length - 1) {
       activeOrder = 1;
+      
    } else if (activeOrder === 0) {
       activeOrder = slides.length - 2;
    }
    //--------------------------------------------
+   
    update();
+   
 }
 
 function navigationHandler() {
@@ -127,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
    function formValidate(form) {
       let error = 0;
       let formReq = document.querySelectorAll('._req');
-      console.log(formReq.length);
+      
       
       for (let index = 0; index < formReq.length; index++) {
          const input = formReq[index];

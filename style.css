@@ -180,7 +180,7 @@ wrapper {
    display: flex;
    flex-direction: column; 
    font-family: 'Fredoka-Regular';
-   font-size: 60px;
+   font-size: calc(24px + (60 - 24) * (100vw / 1440));                /* 60px; */
    text-align: center;
    z-index: 13;
 
@@ -371,12 +371,12 @@ wrapper {
    font-family: 'Fredoka-SemiBold';
    position: fixed;
    top: 0;
-   right: 100vw; /* calc((100vw - 100%) / 2); */
+   right: 0; /* calc((100vw - 100%) / 2); */
    z-index: 15;
    background: linear-gradient(-45deg,  /* rgba(16, 115, 87, 1), */  rgba(26, 61, 114, 1) 13%, rgba(9, 52, 66, 1));
    /* transform: translateX(-8px); */
-   margin-left: -8px;
-   
+   margin-left: -0.53%;
+    
 }
 
 .header__leftMenu {
@@ -388,7 +388,7 @@ wrapper {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
-   font-size: 14px;
+   font-size: calc(12px + (14 - 12) * (100vw / 1440));                            /* 14px; */
    color: #FDF4C8;
    text-shadow: 1px 0 1px rgba(26, 61, 114, 1), 
    0 1px 1px rgba(26, 61, 114, 1), 
@@ -422,7 +422,7 @@ wrapper {
 /* -----------------TEMPORARY LINK-------------------------------------- */
 .link {
    justify-content: space-between;
-   font-size: 14px;
+ /*   font-size: 14px; */
    color: #FDF4C8;
 }
 /* ---------------------------------------------------------------------- */
@@ -454,7 +454,7 @@ wrapper {
    0 1px 1px rgba(26, 61, 114, 1), 
    -1px 0 1px rgba(26, 61, 114, 1), 
    0 -1px 1px rgba(26, 61, 114, 1);
-   font-size: 26px;
+   font-size: calc(20px + (26 - 20) * (100vw / 1440)); /* 26px; */
    /* margin-top: 24px; */
    text-align: center;
    display: inline-flex;
@@ -467,8 +467,24 @@ wrapper {
    content: url("images/logo-small2.png");
    width: 53px;
    height: 67px;
+   margin-right: 15px;
    
 }
+
+/*------------------------HEADER SMALL --------------------------------------*/
+.headerSmall {
+   width: 100vw;
+   height: 48px;
+   min-height: 48px;
+   background: linear-gradient(175deg, rgba(9, 52, 66, 1), rgba(26, 61, 114, 1), rgba(16, 115, 87, 1));
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 25;
+   transform: translateY(-100%);
+
+}
+/*---------------------------------------------------------------------------*/
 
 .editorial {
    width: 100%;
@@ -746,7 +762,7 @@ wrapper {
    position: absolute;
    width: 500px;
    height: 320px; 
-   /* transition: all .5s ease-in-out; */
+   transition: all .5s ease-in-out;
    cursor: pointer;
    
 }
@@ -1050,6 +1066,7 @@ h3 {
 @media (min-width: 1440px) {
    .header {
       left: calc((100vw - 1440px) / 2);
+   
    }
    
    .editorial__upper__center {
@@ -1100,8 +1117,9 @@ h3 {
 
    .header {
       width: 100vw;
+      min-width: 100vw;
       left: 0;
-      transform: translateX(+8px);
+      
    }
    
    .contactUs {
@@ -1207,6 +1225,14 @@ h3 {
       margin-right: 0;
    }
 
+   .header__leftMenu {
+      margin-left: 4%;
+   }
+
+   .header__rightMenu {
+      margin-right: 6%;
+   }
+
 }
 /*-----------------------------------------------------------------------------------------------*/
 /*---------------------------------AT THE RESOLUTION LESS THAN 900px-----------------------------*/
@@ -1243,10 +1269,7 @@ h3 {
       max-width: 600px;
    }
 
-   .link {
-      font-size: 20px;
-   }
-
+   
    .firstScreen__frame51__button {
       min-width: 250px;
       left: calc(((100% - 200px) / 2) - 25px);
@@ -1257,11 +1280,8 @@ h3 {
    }
    
    .header__leftMenu, .header__rightMenu {
-      font-size: 4px;
       width: 25%;
-      flex-direction: column;
-      align-items: center;
-      min-height: 90px;
+      
       }
 
 }
@@ -1291,6 +1311,30 @@ h3 {
       max-width: 620px;
       margin-left: auto;
       margin-right: auto;
+   }
+
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------FONTS SCALING UNDER 768px-----------------------------------*/
+@media (max-width: 767px) {
+   .header__mainLogo__mainTitle {
+      font-size: calc(24px + (26 - 24 + (26 - 24) * 0.7) * ((100vw - 360px) / 1440));
+   }
+
+   .header__leftMenu, .header__rightMenu {
+      font-size: calc(12px + (14 - 12 + (14 - 12) * 0.7) * ((100vw - 360px) / 1440));
+   }
+
+   .firstScreen__frame51 {
+      font-size: calc(24px + (60 - 24 + (60 - 24) * 0.7) * ((100vw - 360px) / 1440));
+   }
+
+   .header {
+      transform: translateY(-100%);
+   }
+
+   .headerSmall {
+      transform: translateY(0%);
    }
 
 }
