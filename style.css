@@ -482,8 +482,87 @@ wrapper {
    left: 0;
    z-index: 25;
    transform: translateY(-100%);
+   display: inline-flex;
+   justify-content: space-between;
+   align-items: center;
+   
 
 }
+
+.headerSmall__mainLogo {
+   font-family: 'Fredoka-Medium';
+   font-size: 20px;
+   color: rgba(253, 244, 200, 1);
+   display: inline-flex;
+   flex-direction: row;
+   align-items: center;
+   margin-left: -13px;
+}
+
+.headerSmall__mainLogo__png  {
+   width: 19.41px;
+   height: 24.53px;
+   margin-right: 7px;
+   filter: drop-shadow(1px 5px 5px black);
+}
+
+.headerSmall__menu {
+   width: 24px;
+   min-width: 24px;
+   height: 24px;
+   min-height: 24px;
+   padding: 5px 5px 5px 5px;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: flex-start;
+   margin-left: 4.4%;
+}
+
+.headerSmall__menu_item {
+   height: 2px;
+   max-height: 2px;
+   min-height: 2px;
+   width: 100%;
+   
+   border-radius: 1px;
+}
+
+.green {
+   max-width: 60%;
+   background-color: rgba(0, 197, 168, 1);
+}
+
+.orange {
+   background-color: rgba(220, 132, 0, 1);
+   min-height: 2.4px;
+   height: 3px;
+}
+
+.white {
+   background-color: rgba(253, 244, 200, 1);
+}
+
+.headerSmall__mail {
+   width: 24px;
+   height: 24px;
+   min-width: 24px;
+   min-height: 24px;
+   padding: 6.5px 4.5px 4.5px 4.5px;
+   margin-right: 8%;
+
+}
+
+.headerSmall__mail img {
+   max-width: 15px;
+   max-height: 11px;
+   width: 15px;
+   height: 11px;
+   
+}
+
+
 /*---------------------------------------------------------------------------*/
 
 .editorial {
@@ -1066,6 +1145,7 @@ h3 {
 @media (min-width: 1440px) {
    .header {
       left: calc((100vw - 1440px) / 2);
+      
    
    }
    
@@ -1118,7 +1198,7 @@ h3 {
    .header {
       width: 100vw;
       min-width: 100vw;
-      left: 0;
+      margin-left: 0;
       
    }
    
