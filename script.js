@@ -165,6 +165,26 @@ document.addEventListener('DOMContentLoaded', function () {
       return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
    }
 
-   });
+});
+   
+//--------------------SMALL MENU OPERATION---------------------------------------
+const colorLogo = document.querySelector('.headerSmall__menu');
+const menuSmall = document.querySelector('.menuSmall');
+const body = document.body;
+
+const green = document.querySelector('.green');
+const orange = document.querySelector('.orange');
+const white = document.querySelector('.white');
+colorLogo.addEventListener('click', smallMenuDropout);
+
+function smallMenuDropout() {
+   menuSmall.classList.toggle('_dropout');
+   green.classList.toggle('_hideGreen');
+   orange.classList.toggle('_turnOrange');
+   white.classList.toggle('_turnWhite');
+   body.classList.toggle('_bodyFreeze');
+   
+}
+//-------------------------------------------------------------------------------
 
   

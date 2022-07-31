@@ -369,6 +369,7 @@ wrapper {
    display: flex;
    flex-direction: row;
    justify-content: space-between;
+   align-items: center;
    /* align-items: center; */
    font-family: 'Fredoka-SemiBold';
    position: fixed;
@@ -547,6 +548,10 @@ wrapper {
    background-color: rgba(253, 244, 200, 1);
 }
 
+.green, .orange, .white {
+   transition: all 0.9s ease-in-out;
+}
+
 .headerSmall__mail {
    width: 24px;
    height: 24px;
@@ -567,6 +572,52 @@ wrapper {
 
 
 /*---------------------------------------------------------------------------*/
+
+/*-------------------------SMALL DROPOUT MENU----------------------------------------*/
+.menuSmall {
+   width: 50%;
+   height: calc(100vh - 48px);
+   max-height: 100vh;
+   
+   background-color: rgba(26, 61, 114, 1);
+   
+   color: rgba(253, 244, 200, 1);
+   transform: translateY(-110%);
+   transition: all 1.2s ease-in-out;
+   font-family: 'Fredoka-SemiBold';
+   font-size: 20px;
+   position: absolute;
+   top: 0px;
+   left: 0;
+   z-index: 22;
+   
+}
+
+.menuSmall__container {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom: 34px;
+   padding-top: 34px;
+   }
+
+.menuSmall__container__item {
+   
+   width: 100%;
+   padding: 10px;
+   padding-top: calc((((100vh - 68px) / 6) / 2) - 12px);
+   height: calc((100vh - 68px) / 6);
+   text-align: center;
+   
+}   
+.menuSmall__container__item:not(:last-child) {
+   border-bottom: 1px rgba(0, 197, 168, 1) solid;
+}
+
+/*----------------------------------------------------------------------------------*/
 
 .editorial {
    width: 100%;
@@ -1398,7 +1449,8 @@ h3 {
 
 }
 /*-----------------------------------------------------------------------------------------------*/
-/*-----------------------------------FONTS SCALING UNDER 768px-----------------------------------*/
+
+/*-----------------------------------AT RESOLUTION LESS THAN UNDER 768px-------------------------*/
 @media (max-width: 767px) {
    .header__mainLogo__mainTitle {
       font-size: calc(24px + (26 - 24 + (26 - 24) * 0.7) * ((100vw - 360px) / 1440));
@@ -1419,6 +1471,36 @@ h3 {
    .headerSmall {
       transform: translateY(0%);
    }
+
+   ._dropout {
+      transform: translateY(48px);
+      pointer-events: none;
+      position: fixed;
+   }
+
+   ._bodyFreeze {
+      overflow: hidden;
+   }
+
+   ._hideGreen {
+      visibility: hidden;
+   }
+
+   ._turnOrange {
+      transform: rotate(-45deg) translateY(4.2px)
+   }
+
+   ._turnWhite {
+      transform: rotate(45deg) translateY(-4px);
+   }
+
+}
+/*-----------------------------------------------------------------------------------------------*/
+/*-----------------------------------AT RESOLUTION UNDER 400px-----------------------------------*/
+@media (max-width: 400px) {
+.menuSmall {
+   width: 100%;
+}
 
 }
 /*-----------------------------------------------------------------------------------------------*/
