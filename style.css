@@ -142,7 +142,8 @@ h6 {
 
 /*----------------------------------------MAIN PORTION--------------------------------------------*/
 wrapper {
-   width: 100vw;
+   width: 1440px;
+   /* width: 100vw; */
    max-width: 1440px;
    min-height: 4166px;
 }
@@ -157,6 +158,7 @@ wrapper {
    flex-direction: column;
    margin: 0 auto;
    overflow-x: hidden;
+   
 }
 
 .firstScreen {
@@ -371,11 +373,12 @@ wrapper {
    font-family: 'Fredoka-SemiBold';
    position: fixed;
    top: 0;
-   right: 0; /* calc((100vw - 100%) / 2); */
+   left: calc((100vw - 1440) / 2);
    z-index: 15;
    background: linear-gradient(-45deg,  /* rgba(16, 115, 87, 1), */  rgba(26, 61, 114, 1) 13%, rgba(9, 52, 66, 1));
    /* transform: translateX(-8px); */
-   margin-left: -0.53%;
+   /* margin-left: -0.53%; */
+   
     
 }
 
@@ -1144,7 +1147,7 @@ h3 {
 /*-------------------------AT RESOLUTION MORE THAN 1440px----------------------------------------*/
 @media (min-width: 1440px) {
    .header {
-      left: calc((100vw - 1440px) / 2);
+      left:             /* calc((100vw - 1440px) / 2); */
       
    
    }
