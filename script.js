@@ -61,18 +61,19 @@ function update() {
 
       if (leftSlide) {
          leftSlide.style.left = `${width / initPos - i * 440}px`;
-         leftSlide.style.transform = "scale(0.69)";
+         leftSlide.style.transform = "scale(0.5)";
       }
 
       const rightSlide = document.querySelector(`.slide[data-order="${activeOrder + i}"]`);
       if (rightSlide) {
          rightSlide.style.left = `${width / initPos + i * 440}px`;
-         rightSlide.style.transform = "scale(0.69)";
+         rightSlide.style.transform = "scale(0.5)";
       }
 
-      centerSlide.style.transform = "scale(1.0)";
+      centerSlide.style.transform = "scale(0.9)";
    
    }
+   
 }
 
 function clickHandler() { 
@@ -97,7 +98,8 @@ function navigationHandler() {
    
    if (dir === 'prev') {
       activeOrder = Math.max(0, activeOrder - 1);
-   } else if (dir === 'next') {
+      
+      } else if (dir === 'next') {
       activeOrder = Math.min(slides.length - 1, activeOrder + 1);
    }
    //----implementing infinity effect------------
@@ -108,7 +110,11 @@ function navigationHandler() {
    }
    //-------------------------------------------
    update();
+   
 }
+//--------------------------------------------------------------
+//------------------BUTTONS ANIMATIONS----------------------------
+
 //--------------------------------------------------------------------------------------------------------
 
 //------------------------------FEEDBACK EMAIL FORM VALIDATION -------------------------------------------
@@ -166,10 +172,45 @@ document.addEventListener('DOMContentLoaded', function () {
    }
 
 });
-   
+
+//-------------------BIG MENU OPERATION ---------------------------------------
+const MenuLinks = document.querySelectorAll(".link[data-goto1]");
+
+
+if (MenuLinks.length > 0) {
+
+
+
+         MenuLinks.forEach(MenuLink => {
+         MenuLink.addEventListener('click', onMenuClick1);
+         
+      });
+      function onMenuClick1(e) {
+      const clickHolder = e.target;
+      if (clickHolder.dataset.goto1 && document.querySelector(clickHolder.dataset.goto1)) {
+         const gotoBlock = document.querySelector(clickHolder.dataset.goto1);
+         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.header').offsetHeight;
+         
+         
+        
+         window.scrollTo({
+            top: gotoBlockValue,
+            behavior: "smooth"
+         });
+         e.preventDefault();
+         }
+      }
+}
+
+
+
+
+//-------------------------------------------------------------------------------
+
 //--------------------SMALL MENU OPERATION---------------------------------------
 const colorLogo = document.querySelector('.headerSmall__menu');
 const menuSmall = document.querySelector('.menuSmall');
+const menuTurtle = document.querySelector('#menuTurtle');
 const body = document.body;
 
 const green = document.querySelector('.green');
@@ -183,7 +224,46 @@ function smallMenuDropout() {
    orange.classList.toggle('_turnOrange');
    white.classList.toggle('_turnWhite');
    body.classList.toggle('_bodyFreeze');
+   menuTurtle.style.opacity = '1.0';
    
+   
+}
+
+
+const smallMenuLinks = document.querySelectorAll('.menuSmall__container__link[data-goto]');
+
+
+if (smallMenuLinks.length > 0) {
+
+   
+   
+
+      
+      smallMenuLinks.forEach(smallMenuLink => {
+         smallMenuLink.addEventListener('click', onSmallMenuClick);
+         
+      });
+      function onSmallMenuClick(e) {
+      const smallMenuLink = e.target;
+      if (smallMenuLink.dataset.goto && document.querySelector(smallMenuLink.dataset.goto)) {
+         const gotoBlock = document.querySelector(smallMenuLink.dataset.goto);
+         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.headerSmall').offsetHeight;
+         
+         
+         if (menuSmall.classList.contains('_dropout')) {
+            menuSmall.classList.remove('_dropout');
+            green.classList.remove('_hideGreen');
+            orange.classList.remove('_turnOrange');
+            white.classList.remove('_turnWhite');
+            body.classList.remove('_bodyFreeze');
+         }
+         window.scrollTo({
+            top: gotoBlockValue,
+            behavior: "smooth"
+         });
+         e.preventDefault();
+         }
+      }
 }
 //-------------------------------------------------------------------------------
 
