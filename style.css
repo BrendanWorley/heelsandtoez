@@ -592,7 +592,7 @@ wrapper {
 /*-------------------------SMALL DROPOUT MENU----------------------------------------*/
 .menuSmall {
    width: 50%;
-   height: calc(100vh - 48px);
+   height: calc(80vh - 48px);
    max-height: 100vh;
    
    background-color: rgba(253, 244, 200, 1); /* rgba(26, 61, 114, 1); */
