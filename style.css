@@ -517,6 +517,14 @@ wrapper {
    margin-left: -13px;
 }
 
+ #headerSmall__mainLogo {
+   font-family: 'Fredoka-Medium';
+   font-size: 20px;
+   color: rgba(253, 244, 200, 1);
+   cursor: pointer;
+   
+}
+
 .headerSmall__mainLogo__png  {
    width: 19.41px;
    height: 24.53px;
@@ -573,6 +581,7 @@ wrapper {
    min-height: 24px;
    /* padding: 6.5px 4.5px 4.5px 4.5px; */
    margin-right: 8%;
+   position: relative;
 
 }
 
@@ -582,30 +591,34 @@ wrapper {
    width: 24px;
    height: 24px;
    filter: invert(96%) sepia(100%) saturate(372%) hue-rotate(315deg) brightness(105%) contrast(98%);
-   
-   
-}
+   }
+
+   #sendMailLink {
+   min-width: 24px;
+   min-height: 24px;
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   cursor: pointer;
+   }
 
 
 /*---------------------------------------------------------------------------*/
 
 /*-------------------------SMALL DROPOUT MENU----------------------------------------*/
 .menuSmall {
-   width: 50%;
+   width: 60%;
    height: calc(80vh - 48px);
-   max-height: 100vh;
-   
+   max-height: calc(80vh - 48px);
    background-color: rgba(253, 244, 200, 1); /* rgba(26, 61, 114, 1); */
-   
-   /* color: rgba(26, 61, 114, 1); */ /* rgba(253, 244, 200, 1); */
-   
-   /* transform: translateY(-110%); */
    transform: translateX(-110%);
-   transition: all 1.2s ease-in-out;
+   transition: all 0.9s ease-in-out;
    font-family: 'Fredoka-SemiBold';
-   font-size: 20px;
+   font-size: 3.5vh;
    position: absolute;
-   top: 0px;
+   top: 0;
    left: 0;
    z-index: 20000;
    border-radius: 0 100% 100% 0;
@@ -622,8 +635,8 @@ wrapper {
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
-   padding-bottom: 34px;
-   padding-top: 34px;
+   padding-bottom: 3vw;
+   padding-top: 3vw;
    z-index: 2001;
    position: relative;
    }
@@ -633,8 +646,8 @@ wrapper {
    width: 100%;
    padding: 10px;
    padding-left: 10%;
-   padding-top: calc((((100vh - 68px) / 6) / 2) - 12px);
-   height: calc((100vh - 68px) / 6);
+   padding-top: calc((((80vh - 68px) / 6) / 2) - 1.5vh);
+   height: calc((80vh - 68px) / 6);
    text-align: start;
    z-index: 2002;
    /* cursor: pointer; */
@@ -658,8 +671,11 @@ wrapper {
 #menuTurtle {
    position: absolute;
    bottom: 0;
-   left: 65%;
-   transform: scale(1.8);
+   margin-bottom: -10%;
+   left: 55%;
+   /*transform: scale(1.8);*/
+   height: 20vh;
+   max-width: 25vw;
    filter: drop-shadow(1px 5px 5px black);
    opacity: 0;
    transition: all 3s;
