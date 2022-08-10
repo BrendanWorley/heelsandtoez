@@ -265,6 +265,41 @@ if (smallMenuLinks.length > 0) {
          }
       }
 }
+
+      //----------adjusting the dropoutmenu under landscape layout-------------
+      
+      
+      visualViewport.addEventListener('resize', () => {
+         const landX = window.innerWidth;
+         const landY = window.innerHeight;
+         const landRatio = landX / landY;
+         const ratioTarget1 = document.querySelector('.menuSmall');
+         const ratioTarget = document.querySelector('.menuSmall__container');
+         const ratioTarget2 = document.querySelectorAll('.menuSmall__container__item');
+         const ratioTarget3 = document.querySelector('#menuTurtle'); 
+         console.log(landX);
+         console.log(landY);
+         console.log(landRatio);
+
+         if (landRatio > 1.7 || landY < 450) {
+            ratioTarget1.classList.add('_incRatio1');
+            ratioTarget.classList.add('_incRatio');
+            ratioTarget3.style.display = 'none';
+            
+            for (i = 0; i < ratioTarget2.length; i++) {
+               ratioTarget2[i].classList.add('_incRatio2');
+            }
+                     
+            } else {
+               ratioTarget.classList.remove('_incRatio');
+               ratioTarget1.classList.remove('_incRatio1');
+               ratioTarget3.style.display = 'inherit';
+               
+               for (i = 0; i < ratioTarget2.length; i++) {
+                  ratioTarget2[i].classList.remove('_incRatio2');
+               }
+            }
+      });
 //-------------------------------------------------------------------------------
 
   
