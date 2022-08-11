@@ -172,6 +172,7 @@ wrapper {
    background: linear-gradient(-45deg,  rgba(16, 115, 87, 1),  rgba(26, 61, 114, 1), rgba(9, 52, 66, 1));
    flex-direction: column;
    position: relative;
+   overflow: hidden;
 }
 
 .firstScreen__frame51 {
@@ -251,6 +252,12 @@ wrapper {
    width: 100%;
 }
 
+.firstScreen__turtle__holder {
+   z-index: 1;
+   position: absolute;
+   
+}
+
 .firstScreen__turtle__png {
    max-width: 547px;
    min-width: 547px;
@@ -259,10 +266,8 @@ wrapper {
    position: absolute; 
    bottom: 0;
    right: 0;
-   z-index: 1;
-   display: none;
    /* display: none; */
-}
+   }
 
 .firstScreen__flowers {
    width: 100%;
@@ -324,6 +329,7 @@ wrapper {
    display: flex;
    flex-direction: row;
    align-items: end;
+   z-index: 2;
    }
 
 .firstScreen__flowers__stones__stone1 {
@@ -334,6 +340,7 @@ wrapper {
    display: flex;
    flex-direction: row;
    align-items: end;
+   z-index: 2;
    }
 
 .firstScreen__flowers__stones__stone1_padding {
@@ -359,6 +366,7 @@ wrapper {
    display: flex;
    flex-direction: row;
    align-items: end;
+   z-index: 2;
    }
 
 .firstScreen__flowers__stones__stone2_padding {
@@ -610,17 +618,17 @@ wrapper {
 /*-------------------------SMALL DROPOUT MENU----------------------------------------*/
 .menuSmall {
    width: 60%;
-   height: calc(80vh - 48px);
+   height: calc(100vh - 48px);
    /* max-height: calc(80vh - 48px); */
    background-color: rgba(253, 244, 200, 1); /* rgba(26, 61, 114, 1); */
-   transform: translateX(-110%);
+   transform: translateY(-110%);
    transition: all 0.9s ease-in-out;
    font-family: 'Fredoka-SemiBold';
    font-size: 3.5vh;
    position: absolute;
    top: 0;
    left: 0;
-   z-index: 20000;
+   z-index: 24;
    border-radius: 0 100% 100% 0;
    border-right: 5px #CD7F47 solid;
    border-top: 5px #CD7F47 solid;
@@ -647,20 +655,19 @@ wrapper {
    width: 100%;
    padding: 10px;
    padding-left: 10%;
-   padding-top: calc((((80vh - 68px) / 6) / 2) - 1.5vh);
-   height: calc((80vh - 68px) / 6);
+   padding-top: calc((((100vh - 68px) / 6) / 2) - 1.5vh);
+   height: calc((100vh - 68px) / 6);
    text-align: start;
    z-index: 2002;
-   /* cursor: pointer; */
    position: relative;
-   
-}   
+   }   
 
 .menuSmall__container__link {
    z-index: 100000;
    cursor: pointer;
    position: relative;
-   color:rgba(26, 61, 114, 1);
+   color: rgba(106, 135, 211, 1);
+   /* color:rgba(26, 61, 114, 1); */
 }
 
 
@@ -673,14 +680,15 @@ wrapper {
    position: absolute;
    bottom: 0;
    margin-bottom: -10%;
-   left: 55%;
+   left: 60%;
    /*transform: scale(1.8);*/
-   height: 20vh;
-   max-width: 25vw;
+   height: 20vw;
+   width: 19vw;
+   
    filter: drop-shadow(1px 5px 5px black);
    opacity: 0;
-   transition: all 3s;
-   transition-delay: 1s;
+   transition: all 1.5s;
+   
 
 }
 
@@ -1652,29 +1660,31 @@ h3 {
    }
 
    ._incRatio1 {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
       border-style: hidden;
       border-radius: 0;
+      padding: 5%;
       
    }
    
    ._incRatio {
-      height: 85%;
-      flex-direction: row;
+      height: 100%;
+      /* flex-direction: row; */
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       padding: 0;
+      
    }
 
    ._incRatio2 {
       max-width: 30%;
-      height: 25vh;
-      padding: 5%;
-      font-size: 3vw;
+      height: 33vh;
+      padding: 0;
+      font-size: 5vw;
       text-align: center;
-      margin: 0;
+      
       
    }
    
@@ -1763,13 +1773,15 @@ h3 {
    }
 
    .firstScreen__turtle__png {
-      width: 468px;
-      height: 499px;
+      width: 130vw;
+      height: 139vw;
       min-width: 468px;
       min-height: 499px;
       top: 12%;
       left: 3%;
       margin-left: -8%;
+      position: static;
+      
    }
 
   

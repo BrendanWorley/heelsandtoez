@@ -277,9 +277,7 @@ if (smallMenuLinks.length > 0) {
          const ratioTarget = document.querySelector('.menuSmall__container');
          const ratioTarget2 = document.querySelectorAll('.menuSmall__container__item');
          const ratioTarget3 = document.querySelector('#menuTurtle'); 
-         console.log(landX);
-         console.log(landY);
-         console.log(landRatio);
+         
 
          if (landRatio > 1.7 || landY < 450) {
             ratioTarget1.classList.add('_incRatio1');
