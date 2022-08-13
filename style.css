@@ -998,7 +998,7 @@ wrapper {
    height: 100%;
    transition: all 1s ease-in-out;
 }
-
+/*---------------------------------------------------------------------------------------------------*/
 /*------------------------------BUTTONS ANIMATION ----------------------------------------------------*/
 #prev_png:active, #next_png:active, .firstScreen__frame51__button:active {
     
