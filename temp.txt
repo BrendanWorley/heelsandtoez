@@ -1,0 +1,14 @@
+.firstScreen__turtle__png {
+      width: 90vw;
+      height: 96vw;
+      
+      
+   }
+   
+   .firstScreen__turtle__holder {
+      z-index: 1;
+      position: absolute;
+      left: 45%;
+      margin-bottom: -25%;
+       
+   }
