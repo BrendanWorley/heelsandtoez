@@ -1,14 +1,3 @@
-.firstScreen__turtle__png {
-      width: 90vw;
-      height: 96vw;
-      
-      
-   }
-   
-   .firstScreen__turtle__holder {
-      z-index: 1;
-      position: absolute;
-      left: 45%;
-      margin-bottom: -25%;
-       
-   }
+font-size: calc(20px + (40 - 20) * (100vw / 1440));
+
+font-size: calc(16px + (18 - 16 + (18 - 16) * 0.7) * ((100vw - 360px) / 1440));
