@@ -639,7 +639,7 @@ wrapper {
    transform: translateY(-110%);
    transition: all 0.9s ease-in-out;
    font-family: 'Fredoka-SemiBold';
-   font-size: 3.5vh;
+   font-size: calc(25px + (25 - 25) * (100vw / 767));
    position: absolute;
    top: 0;
    left: 0;
@@ -668,7 +668,7 @@ wrapper {
 .menuSmall__container__item {
    
    width: 100%;
-   padding: 10px;
+   /* padding: 10px; */
    padding-left: 10%;
    padding-top: calc((((100vh - 68px) / 6) / 2) - 1.5vh);
    height: calc((100vh - 68px) / 6);
@@ -682,7 +682,6 @@ wrapper {
    cursor: pointer;
    position: relative;
    color: rgba(106, 135, 211, 1);
-   /* color:rgba(26, 61, 114, 1); */
 }
 
 
@@ -769,12 +768,26 @@ wrapper {
    max-height: 302px;
    width: 620px;
    height: 302px;
-   border: 1px solid #00C5A8;
    margin-top: 5%;
    margin-right: auto;
    margin-left: auto;
-   background-image: url("images/video_screenshot.png");
-   object-fit: fill;
+   /* background-image: url("images/video_screenshot.png"); */
+   /* object-fit: fill; */
+   
+   
+}
+
+.editorial__upper__center__video_mp4 {
+   
+   max-width: 620px;
+   max-height: 302px;
+   width: 100%;
+   height: 100%;
+   border-radius: 30px;
+   
+
+   
+   
 }
 
 .editorial__upper__turtle {
@@ -828,14 +841,15 @@ wrapper {
    background: linear-gradient(45deg, rgba(9, 52, 66, 1), rgba(26, 61, 114, 1), rgba(16, 115, 87, 1));
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: start;
    align-items: center;
    position: relative;
+   
 }
 
 .galery__text {
    max-width: 696px;
-   margin-top: 57px;
+   margin-top: 4vw;
    color: rgba(253, 244, 200, 1);
    text-align: center;
    margin-right: auto;
@@ -844,13 +858,16 @@ wrapper {
 
 .galery__text {
    font-family: 'Fredoka-Medium';
-   font-size: 48px;
-   
+   max-width: 696px;
+   width: 696px;
+   }
+
+.galery__text__header {
+   font-size: calc(20px + (48 - 20) * (100vw / 1440));
 }
 
 .galery__text__smallText {
-   font-family: 'Fredoka-Regular';
-   font-size: 18px;
+   font-size: calc(16px + (18 - 16 + (18 - 16) * 0.7) * ((100vw - 360px) / 1440));
    margin-top: 16px;
 }
 
@@ -937,15 +954,7 @@ wrapper {
    transition-duration: 4s;
    }
 
-.galery__nature2 {
-   max-width: 388px;
-   max-height: 200px;
-   min-width: 340px;
-   margin-bottom: 30px;
-   margin-left: auto;
-   margin-right: auto;
-   
-}
+
 
 /*---------------------------------------------SLIDER-------------------------------------------*/
 .slider {
@@ -957,11 +966,13 @@ wrapper {
       
    /* min-width: 1218px;
    min-height: 550px; */
-   margin-top: 68px;
+   margin-top: 4.7vw;
    margin-left: auto;
    margin-right: auto;
-   position: relative;
+   
    overflow: hidden;
+
+   position: relative;
 }
 
 .slider_container {
@@ -986,14 +997,30 @@ wrapper {
    
 }
 
+.slider__navigation__container {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   position: absolute;
+   top: calc(50% - 50px);
+   padding-left: 15%;
+   padding-right: 15%;
+   
+   
+    
+}
+
+
 .slider_navigation {
    max-width: 105.02px;
    max-height: 68.01px;
    width: 105.02px;
    height: 68.01px;
-   position: absolute;
-   bottom: 0;
+   /* position: absolute;
+   top: 0; */
    /* top: 302px; */
+   
 }
 
 .action-next {
@@ -1327,6 +1354,34 @@ h3 {
 /*-------------------------AT RESOLUTION MORE THAN 1440px----------------------------------------*/
 @media (min-width: 1440px) {
    
+   .slider__navigation__container {
+      bottom: 0;
+      padding-left: 9%;
+      padding-right: 9%;
+   }
+   
+   .galery {
+      max-height: 783px;
+      height: 783px;
+   }
+
+   .slider {
+      margin-top: 68px;
+   }
+   
+   .galery__text {
+      margin-top: 57px;
+   }
+   
+   .galery__text__smallText {
+      font-size: 18px;
+   }
+  
+   .galery__text__header {
+      font-size: 48px;
+   }
+
+
    .editorial__upper__center__text {
       font-size: 18px;
    }
@@ -1429,6 +1484,9 @@ h3 {
 /*-----------------------------------------------------------------------------------------------*/
 /*---------------------------------AT THE RESOLUTION HIGHER THAN 1409px----------------------------*/
 @media (min-width: 1409px) {
+   
+   
+   
    .firstScreen__frame51 {
       font-size: 60px;
       
@@ -1604,10 +1662,7 @@ h3 {
 
    }
 
-   .galery__text__smallText {
-      font-size: 30px;
-      max-width: 600px;
-   }
+  
 
    
   
@@ -1644,6 +1699,10 @@ h3 {
 /*-----------------------------------------------------------------------------------------------*/
 /*-----------------------AT RESOLUTION LESS THAN 800px-------------------------------------------*/
 @media (max-width: 800px) {
+   
+   .galery__text {
+      width: 75vw;
+   }
    
    .editorial__frame81 {
       margin-top: -13%;
@@ -1687,6 +1746,27 @@ h3 {
 
 /*--------------AT RESOLUTION LESS THAN UNDER 768px-------------------------*/
 @media (max-width: 767px) {
+   
+   .slider {
+      margin-top: 7.7vw;
+   }
+   
+   .galery__text {
+      margin-top: 11vw;
+   }
+
+   .galery__text__header {
+      font-size: calc(20px + (48 - 20 + (48 - 20) * 0.7) * ((100vw - 360px) / 1440));
+
+   }
+
+   .galery__text__smallText {
+      font-size: calc(16px + (18 - 16 + (18 - 16) * 0.7) * ((100vw - 360px) / 1440));
+   }
+   
+   .menuSmall {
+      font-size: calc(25px + (30 - 25 + (30 - 25) * 0.7) * ((100vw - 360px) / 767));
+   }
    
    .editorial__upper__center {
       padding-top: 11.1vw;
@@ -2047,9 +2127,12 @@ h3 {
    }
    
    .slider {
-      position: absolute;
-      top: 22vh;
+      /* position: absolute;
+      top: 22vh; */
       transform: scale(0.7);
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: -5vw;
       
    }
 
@@ -2091,6 +2174,11 @@ h3 {
 /*------------------------AT RESOLUTION UNDER 450px-----------------------------------*/
 @media (max-width: 450px) {
    
+   .slider {
+      margin-top: -8vw;
+   }
+
+
    .editorial__frame81__item {
       max-width: 271px;
    }
@@ -2104,8 +2192,8 @@ h3 {
    }
    
    .slider {
-      position: absolute;
-      top: 30vh;
+      /* position: absolute;
+      top: 30vh; */
       transform: scale(0.7);
       
    }
