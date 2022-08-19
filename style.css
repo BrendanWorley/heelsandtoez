@@ -765,14 +765,12 @@ wrapper {
 
 .editorial__upper__center__video {
    max-width: 620px;
-   max-height: 302px;
+   max-height: 350px;
    width: 620px;
-   height: 302px;
+   height: 350px;
    margin-top: 5%;
    margin-right: auto;
    margin-left: auto;
-   /* background-image: url("images/video_screenshot.png"); */
-   /* object-fit: fill; */
    
    
 }
@@ -780,11 +778,10 @@ wrapper {
 .editorial__upper__center__video_mp4 {
    
    max-width: 620px;
-   max-height: 302px;
+   max-height: 350px;
    width: 100%;
    height: 100%;
    border-radius: 30px;
-   
 
    
    
@@ -809,7 +806,7 @@ wrapper {
    margin-left: auto;
    margin-right: auto;
    margin-bottom: 48px;
-   margin-top: -8%;
+   margin-top: -4%;
    font-family: 'Fredoka-Regular';
    font-size: 16px;
    display: flex;
@@ -1003,7 +1000,7 @@ wrapper {
    flex-direction: row;
    justify-content: space-between;
    position: absolute;
-   top: calc(50% - 50px);
+   top: 0;
    padding-left: 15%;
    padding-right: 15%;
    
@@ -1355,9 +1352,10 @@ h3 {
 @media (min-width: 1440px) {
    
    .slider__navigation__container {
-      bottom: 0;
-      padding-left: 9%;
-      padding-right: 9%;
+      
+      
+      padding-left: 15.5%;
+      padding-right: 15.5%;
    }
    
    .galery {
@@ -1434,7 +1432,9 @@ h3 {
 /*------------------------------AT THE RESOLUTION LESS THAN 1440px-------------------------------*/
 @media (max-width: 1400px) {
    
-   
+  
+
+
    /* .firstScreen__flowers__flower1 {
       transform: translateX(-70px);
       padding-top: 250px;
@@ -1554,6 +1554,10 @@ h3 {
    
 
 }
+
+
+
+
 
 /*----------------AT THE RESOLUTION LESS THAN 1200px----------------------------*/
 @media (max-width: 1200px) {
@@ -1705,7 +1709,7 @@ h3 {
    }
    
    .editorial__frame81 {
-      margin-top: -13%;
+      margin-top: -8%;
    }
 
    .avatar_text1, .avatar_text2, .avatar_text3 {
@@ -1775,7 +1779,7 @@ h3 {
 
    .editorial__upper__center__video {
       width: 75vw;
-      height: 38vw;
+      height: 42vw;
    }
    
    .editorial__upper__center__text {
@@ -1998,7 +2002,7 @@ h3 {
 @media (max-width: 700px) {
    
    .editorial__frame81 {
-      margin-top: -20%;
+      margin-top: -10%;
    }
    
    /* .firstScreen__turtle__png {
@@ -2069,7 +2073,7 @@ h3 {
 @media (max-width: 640px) {
    
    .editorial__frame81 {
-      margin-top: -25%;
+      margin-top: -15%;
    }
 
    /* .firstScreen__turtle__png {
@@ -2102,7 +2106,7 @@ h3 {
    }
    
    .editorial__frame81 {
-      margin-top: -10%;
+      margin-top: -5%;
    }
 
    }
@@ -2188,7 +2192,7 @@ h3 {
    }
    
    .editorial__frame81 {
-      margin-top: 0%;
+      margin-top: 7%;
    }
    
    .slider {

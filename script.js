@@ -14,6 +14,7 @@ const initShift = 50;
 let initPos = 3.4;
 
 visualViewport.addEventListener('resize', update);
+visualViewport.addEventListener('resize', shiftBox);
 
 
 init();
@@ -113,7 +114,48 @@ function navigationHandler() {
    
 }
 //--------------------------------------------------------------
-//------------------BUTTONS ANIMATIONS----------------------------
+//------------------SLIDER BUTTONS POSITIONING----------------------------
+
+document.addEventListener('DOMContentLoaded', shiftBox);
+
+
+
+
+function shiftBox() {
+   let sliderNavContainer = document.querySelector('.slider__navigation__container');
+   let sliderBox = document.querySelector('.slider');
+   let slideWidth = document.querySelector('.slide').clientWidth;
+   let navWidth = document.querySelector('.slider_navigation').clientWidth;
+   let slideContWidth = sliderNavContainer.clientWidth;
+   let boxSpan = slideContWidth - (2 * navWidth) - slideWidth;
+
+   
+   
+   sliderNavContainer.style.top = '0';
+   
+   if (boxSpan >= 320 && slideContWidth >= 1400) {
+      boxOffset = -105;
+   } else if (boxSpan >= 320 && slideContWidth < 1400) {
+      boxOffset = 33;
+            } else if (boxSpan < 320) {
+               let top3 = sliderBox.offsetTop;
+               boxOffset = -(container.clientHeight / 2) + 34; 
+      
+                  } 
+
+   let height1 = sliderNavContainer.clientHeight;
+   let height2 = sliderBox.clientHeight;
+
+   let top1 = sliderNavContainer.offsetTop;
+   let top2 = sliderBox.offsetTop;
+
+   if (top2 >= top1) {
+      sliderNavContainer.style.top = top1 + (top2 - top1) + (height2 / 2) - (height1 / 2) - boxOffset + 'px'; 
+   } else {
+         sliderNavContainer.style.top = top1 - (top1 - top2) + (height2 / 2) - (height1 / 2) - boxOffset + 'px';
+      }
+   
+}
 
 //--------------------------------------------------------------------------------------------------------
 
