@@ -766,22 +766,27 @@ wrapper {
 .editorial__upper__center__video {
    max-width: 620px;
    max-height: 350px;
-   width: 620px;
-   height: 350px;
+   /* width: 620px;
+   height: 350px; */
    margin-top: 5%;
    margin-right: auto;
    margin-left: auto;
-   
-   
+   border:  5px solid;
+   border-radius: 30px;
+   overflow: hidden;
+
 }
 
 .editorial__upper__center__video_mp4 {
    
-   max-width: 620px;
-   max-height: 350px;
+   /* max-width: 620px;
+   max-height: 350px; */
    width: 100%;
    height: 100%;
-   border-radius: 30px;
+   
+   
+
+
 
    
    
@@ -834,13 +839,14 @@ wrapper {
 .galery {
    max-width: 1440px;
    /* max-height: 783px; */
-   min-height: 783px;
+   height: 783px;
    background: linear-gradient(45deg, rgba(9, 52, 66, 1), rgba(26, 61, 114, 1), rgba(16, 115, 87, 1));
    display: flex;
    flex-direction: column;
    justify-content: start;
    align-items: center;
    position: relative;
+   overflow: hidden;
    
 }
 
@@ -950,6 +956,26 @@ wrapper {
    max-height: 39px;
    transition-duration: 4s;
    }
+
+   .galery_starfish1 {
+      position: absolute;
+      bottom: 3.5%;
+      left: 41.5%;
+      max-width: 111px;
+      width: 14.1%;
+      max-height: 94px;
+      transition-duration: 4s;
+      }
+
+      .galery_starfish2 {
+         position: absolute;
+         bottom: 8.6%;
+         left: 51.1%;
+         max-width: 97px;
+         width: 6.7%;
+         max-height: 82px;
+         transition-duration: 4s;
+         }
 
 
 
@@ -1352,15 +1378,13 @@ h3 {
 @media (min-width: 1440px) {
    
    .slider__navigation__container {
-      
-      
       padding-left: 15.5%;
       padding-right: 15.5%;
    }
    
    .galery {
       max-height: 783px;
-      height: 783px;
+     
    }
 
    .slider {
@@ -1505,6 +1529,10 @@ h3 {
 /*----------------AT THE RESOLUTION LESS THAN 1300px----------------------------*/
 @media (max-width: 1300px) {
    
+  .galery_starfish2 {
+   left: 60%;
+  }
+  
    .firstScreen__turtle__holder {
       margin-top: 35%;
    }
@@ -1576,6 +1604,12 @@ h3 {
 /*-----------------------------------------------------------------------------------------------*/
 /*------------------AT THE RESOLUTION LESS THAN 1000px----------------------------*/
 @media (max-width: 1000px) {
+   
+   .slider__navigation__container {
+      padding-left: 25%;
+      padding-right: 25%;
+   }
+   
    /* .firstScreen__flowers__flower1 {
       transform: translateX(-200px);
    }
@@ -1635,6 +1669,12 @@ h3 {
 /*-----------------------------------------------------------------------------------------------*/
 /*-------------------AT THE RESOLUTION LESS THAN 900px-----------------------------*/
 @media (max-width: 900px) {
+   
+   .slider__navigation__container {
+      padding-left: 22%;
+      padding-right: 22%;
+   }
+   
    /* .firstScreen__flowers__flower1 {
       transform: translateX(-290px);
    }
@@ -1751,6 +1791,16 @@ h3 {
 /*--------------AT RESOLUTION LESS THAN UNDER 768px-------------------------*/
 @media (max-width: 767px) {
    
+   .galery_starfish2 {
+      width: 13%;
+      left: 65%;
+   }
+   
+   .slider__navigation__container {
+      padding-left: 15%;
+      padding-right: 15%;
+   }
+   
    .slider {
       margin-top: 7.7vw;
    }
@@ -1778,8 +1828,13 @@ h3 {
 
 
    .editorial__upper__center__video {
-      width: 75vw;
-      height: 42vw;
+      max-width: 75vw;
+      max-height: 42vw;
+   }
+
+   .editorial__upper__center__video_mp4 {
+      width: 100%;
+      height: 100%;
    }
    
    .editorial__upper__center__text {
@@ -2001,6 +2056,16 @@ h3 {
 /*------------------------AT RESOLUTION UNDER 700px-----------------------------------*/
 @media (max-width: 700px) {
    
+   .galery {
+      max-height: 700px;
+      height: 178vw;
+      background: linear-gradient(135deg, rgba(9, 52, 66, 1), rgba(26, 61, 114, 1), rgba(16, 115, 87, 1));
+   }
+
+   .galery_starfish2 {
+      display: none;
+   }
+   
    .editorial__frame81 {
       margin-top: -10%;
    }
@@ -2101,6 +2166,27 @@ h3 {
 /*-----------------------------------AT RESOLUTION UNDER 600px-----------------------------------*/
 @media (max-width: 600px) {
    
+   .galery_ellipse13 {
+      opacity: 1.0;
+      width: 158px;
+      height: 120px;
+      /* left: 0;
+      bottom: 0; */
+      transform: translateY(500px) translateX(-75vw);
+
+   }
+   
+   .galery_starfish1 {
+      display: none;
+   }
+
+   .galery_starfish2 {
+      display: block;
+      width: 20%;
+      left: 41%;
+      bottom: 11.3%;
+   }
+
    .editorial__upper {
       height: 90vw;
    }
@@ -2121,6 +2207,46 @@ h3 {
 
 /*-----------------------AT RESOLUTION UNDER 570px-----------------------------------*/
 @media (max-width: 570px) {
+   
+   .galery_ellipse11 {
+      opacity: 1.0;
+      width: 29px;
+      height: 39px;
+      transform: scale(1.8);
+   }
+
+   .galery_ellipse12 {
+      opacity: 1.0;
+      width: 29px;
+      height: 39px;
+      transform: translate(0vw, -75vw) scale(1.8);
+   }
+
+   .galery_ellipse5 {
+      opacity: 1.0;
+      width: 105px;
+      height: 85px;
+      transform: translate(60vw, 125vw);
+   }
+   
+   
+   .galery_ellipse13 {
+      opacity: 1.0;
+      width: 158px;
+      height: 120px;
+      /* left: 0;
+      bottom: 0; */
+      transform: translateY(110vw) translateX(-70vw);
+
+   }
+   
+   
+   .galery_starfish2 {
+      display: block;
+      width: 20%;
+      left: 41%;
+      bottom: 18.3%;
+   }
    
    .editorial__frame81 {
       margin-top: -10%;
@@ -2177,6 +2303,38 @@ h3 {
 /*-----------------------------------------------------------------------------------------------*/
 /*------------------------AT RESOLUTION UNDER 450px-----------------------------------*/
 @media (max-width: 450px) {
+   
+   .galery_ellipse11 {
+      opacity: 1.0;
+      width: 29px;
+      height: 39px;
+      transform: scale(0.9) translate(-30vw, 43vw);
+   }
+
+   .galery_ellipse12 {
+      opacity: 1.0;
+      width: 29px;
+      height: 39px;
+      transform: translate(-11vw, 35vw) scale(1.0);
+   }
+
+   .galery_ellipse5 {
+      opacity: 1.0;
+      width: 105px;
+      height: 85px;
+      transform: translate(28vw, 114vw) scale(0.7);
+   }
+   
+   
+   .galery_ellipse13 {
+      opacity: 1.0;
+      width: 158px;
+      height: 120px;
+      /* left: 0;
+      bottom: 0; */
+      transform: translateY(130vw) translateX(-55vw) scale(0.95);
+
+   }
    
    .slider {
       margin-top: -8vw;
