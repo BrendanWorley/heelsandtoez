@@ -771,7 +771,7 @@ wrapper {
    margin-top: 5%;
    margin-right: auto;
    margin-left: auto;
-   border:  5px solid;
+   border:rgba(0, 197, 168, 1)  5px solid;
    border-radius: 30px;
    overflow: hidden;
 
@@ -1464,9 +1464,9 @@ h3 {
       padding-top: 250px;
    } */
 
-   .galery_ellipse9, .galery_ellipse10  {
+   /* .galery_ellipse9, .galery_ellipse10  {
       opacity: 0;
-   } 
+   }  */
 
    .slider_container {
       max-width: 500px;
@@ -1554,9 +1554,9 @@ h3 {
       transform: translateX(150px);
    }
 
-   .galery_ellipse5, .galery_ellipse13, .galery_ellipse11  {
+   /* .galery_ellipse5, .galery_ellipse13, .galery_ellipse11  {
       opacity: 0;
-   } 
+   }  */
 
    
    
@@ -1589,6 +1589,14 @@ h3 {
 
 /*----------------AT THE RESOLUTION LESS THAN 1200px----------------------------*/
 @media (max-width: 1200px) {
+   .galery_ellipse13 {
+      transform: translate(7vw, 13vw);
+   }
+
+   .galery_ellipse5 {
+      transform: translate(0vw, 10vw);
+   }
+   
    .header__rightMenu {
       width: 27%;
       margin-right: 4%;
@@ -1602,13 +1610,18 @@ h3 {
 }
 
 /*-----------------------------------------------------------------------------------------------*/
-/*------------------AT THE RESOLUTION LESS THAN 1000px----------------------------*/
-@media (max-width: 1000px) {
-   
+/*------------------AT THE RESOLUTION LESS THAN 1006px----------------------------*/
+@media (max-width: 1006px) {
    .slider__navigation__container {
       padding-left: 25%;
       padding-right: 25%;
    }
+}
+
+/*------------------AT THE RESOLUTION LESS THAN 1000px----------------------------*/
+@media (max-width: 1000px) {
+   
+   
    
    /* .firstScreen__flowers__flower1 {
       transform: translateX(-200px);
@@ -1629,9 +1642,9 @@ h3 {
       transform: translateX(250px);
    }
 
-   .galery_ellipse12, .galery_ellipse3, .galery_ellipse8 {
+   /* .galery_ellipse12, .galery_ellipse3, .galery_ellipse8 {
       opacity: 0;
-   }
+   } */
 
    .action-next {
     
@@ -2212,14 +2225,14 @@ h3 {
       opacity: 1.0;
       width: 29px;
       height: 39px;
-      transform: scale(1.8);
+      transform: scale(1.2);
    }
 
    .galery_ellipse12 {
       opacity: 1.0;
       width: 29px;
       height: 39px;
-      transform: translate(0vw, -75vw) scale(1.8);
+      transform: translate(0vw, -75vw) scale(1.2);
    }
 
    .galery_ellipse5 {
@@ -2386,6 +2399,11 @@ h3 {
 /*-------------------------AT RESOLUTION UNDER 400px-----------------------------------*/
 @media (max-width: 400px) {
 
+  .galery_ellipse10, .galery_ellipse3, .galery_ellipse8, .galery_ellipse9 {
+   opacity: 0;
+  }
+  
+  
    .editorial__upper {
       height: 107vw;
    }
