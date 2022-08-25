@@ -1,3 +1,60 @@
 font-size: calc(16px + (18 - 16) * (100vw / 1440));
 
 font-size: calc(16px + (18 - 16 + (18 - 16) * 0.7) * ((100vw - 360px) / 1440));
+
+// class Client {
+//    constructor(imageSource, text1, text2, text3, order) {
+//       this.imageSource = imageSource;
+//       this.text1 = text1;
+//       this.text2 = text2;
+//       this.text3 = text3;
+//       this.order = order;
+//    }
+
+//    createClient() {
+            
+//       const clientContainer = document.createElement('div');
+//       clientContainer.classList.add('clientContainer');
+      
+//       const clientContainerA = document.createElement('div');
+//       clientContainerA.classList.add('clientContainerA');
+      
+//       const clientPicture = document.createElement('img');
+//       clientPicture.classList.add('clientImg');
+//       clientPicture.src = this.imageSource;
+//       clientContainerA.appendChild(clientPicture);
+
+//       const clientText2 = document.createElement('p');
+//       clientText2.classList.add('clientText2');
+//       clientText2.textContent = this.text2;
+//       clientContainerA.appendChild(clientText2);
+
+//       const clientText3 = document.createElement('p');
+//       clientText3.classList.add('clientText3');
+//       clientText3.textContent = this.text3;
+//       clientContainerA.appendChild(clientText3);
+
+//       const clientContainerB = document.createElement('div');
+//       clientContainerB.classList.add('clientContainerB');
+
+//       const clientText1 = document.createElement('p');
+//       clientText1.classList.add('clientText1');
+//       clientText1.textContent = this.text1;
+//       clientContainerB.appendChild(clientText1);
+
+//       if (this.order === 0 || this.order === 2) {
+//          clientContainer.appendChild(clientContainerB);
+//          clientContainer.appendChild(clientContainerA);
+//          } else {
+//          clientContainer.appendChild(clientContainerA);
+//          clientContainer.appendChild(clientContainerB);
+//       }
+
+//       rect24__frame118.appendChild(clientContainer);
+
+//    }
+// }
+
+// const Galanin = new Client('StasGalanin', 'images/avatar1.png', avatar_text1, document.querySelector('.avatar_text3').innerText, document.querySelector('.avatar_text2').innerText);   
+// Galanin.createClient();
+

@@ -1804,6 +1804,8 @@ h3 {
 /*--------------AT RESOLUTION LESS THAN UNDER 768px-------------------------*/
 @media (max-width: 767px) {
    
+   
+   
    .galery_starfish2 {
       width: 13%;
       left: 65%;
@@ -2345,7 +2347,7 @@ h3 {
       height: 120px;
       /* left: 0;
       bottom: 0; */
-      transform: translateY(130vw) translateX(-55vw) scale(0.95);
+      transform: translateY(125vw) translateX(-55vw) scale(0.95);
 
    }
    

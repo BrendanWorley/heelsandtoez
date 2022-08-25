@@ -17,6 +17,7 @@ visualViewport.addEventListener('resize', update);
 visualViewport.addEventListener('resize', shiftBox);
 
 
+
 init();
 
 function init() {
@@ -118,9 +119,6 @@ function navigationHandler() {
 
 document.addEventListener('DOMContentLoaded', shiftBox);
 
-
-
-
 function shiftBox() {
    let sliderNavContainer = document.querySelector('.slider__navigation__container');
    let sliderBox = document.querySelector('.slider');
@@ -128,8 +126,6 @@ function shiftBox() {
    let navWidth = document.querySelector('.slider_navigation').clientWidth;
    let slideContWidth = sliderNavContainer.clientWidth;
    let boxSpan = slideContWidth - (2 * navWidth) - slideWidth;
-
-   
    
    sliderNavContainer.style.top = '0';
    
@@ -243,10 +239,6 @@ if (MenuLinks.length > 0) {
          }
       }
 }
-
-
-
-
 //-------------------------------------------------------------------------------
 
 //--------------------SMALL MENU OPERATION---------------------------------------
@@ -268,18 +260,12 @@ function smallMenuDropout() {
    body.classList.toggle('_bodyFreeze');
    menuTurtle.style.opacity = '1.0';
    
-   
 }
-
 
 const smallMenuLinks = document.querySelectorAll('.menuSmall__container__link[data-goto]');
 
 
 if (smallMenuLinks.length > 0) {
-
-   
-   
-
       
       smallMenuLinks.forEach(smallMenuLink => {
          smallMenuLink.addEventListener('click', onSmallMenuClick);
@@ -341,5 +327,120 @@ if (smallMenuLinks.length > 0) {
             }
       });
 //-------------------------------------------------------------------------------
+
+//------------CLIENTS FRAME 118 LAYOUT REWORK-----------------------------------
+      //------setting up the cliche for Client-object creation------------------
+
+visualViewport.addEventListener('resize', updateRect24);
+console.log(visualViewport.width);
+const group1ToBeRemoved = document.querySelector('.rect24__frame118__group1');
+// let clientsList = document.querySelectorAll('.clientContainer');
+// console.log(clientsList.length);  
+
+function updateRect24() {
+   let clientsList = document.querySelectorAll('.clientContainer');
+   console.log(clientsList.length);  
+
+   if (visualViewport.width <= 767 && clientsList.length === 0) {
+      const rect24__frame118 = document.querySelector('.rect24__frame118');      
+      const clientsInputList = document.querySelectorAll('.rect24__ul__item');
+      
+
+
+      let orderN = 0;
+      for (const clientInput of clientsInputList) {
+
+         
+         const clientInputImage = clientInput.children[0].children[0].src;
+         // console.log(clientInputImage);
+         const clientInputQuotes = clientInput.children[1].children[0].src;
+         // console.log(clientInputQuotes);
+         const clientInputText1 = clientInput.children[2].children[0].innerText;
+         // console.log(clientInputText1);
+         const clientInputText2 = clientInput.children[3].children[0].innerText;
+         // console.log(clientInputText2);
+         const clientInputText3 = clientInput.children[4].children[0].innerText;
+         // console.log(clientInputText3);
+
+         class Client {
+            constructor(imageSource, imageQuotes, text1, text2, text3, order) {
+               this.imageSource = imageSource;
+               this.imageQuotes = imageQuotes;
+               this.text1 = text1;
+               this.text2 = text2;
+               this.text3 = text3;
+               this.order = order;
+            }
+         
+            createClient() {
+                     
+               const clientContainer = document.createElement('div');
+               clientContainer.classList.add('clientContainer');
+               
+               const clientContainerA = document.createElement('div');
+               clientContainerA.classList.add('clientContainerA');
+               
+               const clientPicture = document.createElement('img');
+               clientPicture.classList.add('clientImg');
+               clientPicture.src = this.imageSource;
+               clientContainerA.appendChild(clientPicture);
+               
+               const clientQuotes = document.createElement('img');
+               clientQuotes.classList.add('clientQuotes');
+               clientQuotes.src = this.imageQuotes;
+               clientContainerA.appendChild(clientQuotes);
+
+               const clientText2 = document.createElement('p');
+               clientText2.classList.add('clientText2');
+               clientText2.textContent = this.text2;
+               clientContainerA.appendChild(clientText2);
+         
+               const clientText3 = document.createElement('p');
+               clientText3.classList.add('clientText3');
+               clientText3.textContent = this.text3;
+               clientContainerA.appendChild(clientText3);
+         
+               const clientContainerB = document.createElement('div');
+               clientContainerB.classList.add('clientContainerB');
+         
+               const clientText1 = document.createElement('p');
+               clientText1.classList.add('clientText1');
+               clientText1.textContent = this.text1;
+               clientContainerB.appendChild(clientText1);
+         
+               if (this.order === 0 || this.order === 2) {
+                  clientContainer.appendChild(clientContainerB);
+                  clientContainer.appendChild(clientContainerA);
+                  } else if (this.order === 1) {
+                  clientContainer.appendChild(clientContainerA);
+                  clientContainer.appendChild(clientContainerB);
+               }
+         
+               rect24__frame118.appendChild(clientContainer);
+         
+            }
+         }
+
+         group1ToBeRemoved.style.display = 'none';
+
+         const theClient = new Client(clientInputImage, clientInputQuotes, clientInputText1, clientInputText2, clientInputText3, orderN);
+         theClient.createClient();
+         orderN++;
+
+      }
+   } else if (visualViewport.width > 767) {
+      
+      group1ToBeRemoved.style.display = 'flex';
+      for (const clientItem of clientsList) {
+         clientItem.remove();
+      }
+      
+
+   }
+}
+
+
+
+//------------------------------------------------------------------------------
 
   
