@@ -19,7 +19,7 @@
                </li>
                <li class="menuSmall__container__item"><a class="menuSmall__container__link" data-goto=".galery" href="#">PRICES</a></li>
                <li class="menuSmall__container__item"><a class="menuSmall__container__link" data-goto=".rect24__frame118__header" href="#">CLIENTS SAY</a></li>
-               <li class="menuSmall__container__item"><a class="menuSmall__container__link" data-goto=".form" href="#">CONTACTS</a></li>
+               <li class="menuSmall__container__item"><a class="menuSmall__container__link" data-goto=".contuctUs" href="#">CONTACTS</a></li>
             </ul>
          </div>
          <header class="header">
@@ -37,7 +37,7 @@
             <ul class="header__rightMenu">
                <li><a class="link" data-goto1=".galery" href="#">PRICES</a></li>
                <li><a class="link" data-goto1=".rect24__frame118__group1" href="#">CLIENTS SAY</a></li>
-               <li><a class="link" data-goto1=".form" href="#">CONTACTS</a></li>
+               <li><a class="link" data-goto1=".contactUs" href="#">CONTACTS</a></li>
             </ul>
          </header>      
          <div class="headerSmall">
@@ -52,7 +52,7 @@
             </div>
             <div class="headerSmall__mail">
                <img class="headerSmall__mail__png" src="images/sendmail.png">
-               <a id="sendMailLink" class="menuSmall__container__link" data-goto=".form" href="#"></a>
+               <a id="sendMailLink" class="menuSmall__container__link" data-goto=".contactUs" href="#"></a>
             </div> 
          </div>
          <div class="firstScreen">
@@ -289,13 +289,11 @@
          </div>
          <div class="contactUs">
             <div class="getInTouch">
-               <h1>Get in touch</h1>
+               <h1 id="getInTouch__header">Get in touch</h1>
                <div class="getInTouch__text">
-                  <P>Phasellus placerat 
-                  sem vel augue venenatis condimentum. Donec eros 
-                  mauris, laoreet a augue non, auctor cursus 
-                  ante Curabitur risus ligula, vestibulum ut 
-                  metus et, pulvinar pulvinar mi.</P> 
+                  <P>Every feedback you provide, any suggestions you have and any new idea you like to 
+                     share — please don’t hesitate, write to us immediately. While we are working on our 
+                     internet shop, you already can purchase our models by contacting us directly. </P> 
                </div>
                <ul class="getInTouch__bottom">
                   <li class="getInTouch__bottom__item">
@@ -321,16 +319,19 @@
                <img class="contactUs_turtle_png" src="images/contactUs_turtle.png">
             </div>
             <div class="form">
-            <form action="send.php" enctype="multipart/form-data" method="POST" name="form" id="form" class="contactUs_frame182">
-               <input placeholder="your first name" name="name" class="contactUs_form form__input _req" id="contactUs_frame182_name" type="text">
-               <input placeholder="input last name" name="lastName" class="contactUs_form form__input" id="contactUs_frame182_lastName" type="text">
-               <input placeholder="your email" name="email" class="contactUs_form form__input _req _email" id="contactUs_frame182_email" type="text">
-               <textarea placeholder="type your message here" name="message" class="contactUs_form form__input" id="contactUs_frame182_message" type="text" rows="14" wrap="soft"></textarea>
-               <div class="contactUs_frame182_sendButton">
-                  <p id="labelSend"><input id="insertSend" value="SEND" type="submit"/></p>
-                  <img id="arrowSend" src="images/arrow_left_md.png">
-               </div>
-            </form>
+               <form action="send.php" enctype="multipart/form-data" method="POST" name="form" id="form" class="contactUs_frame182">
+                  <input placeholder="your first name" name="name" class="contactUs_form form__input _req" id="contactUs_frame182_name" type="text">
+                  <input placeholder="input last name" name="lastName" class="contactUs_form form__input" id="contactUs_frame182_lastName" type="text">
+                  <input placeholder="your email" name="email" class="contactUs_form form__input _req _email" id="contactUs_frame182_email" type="text">
+                  <textarea placeholder="type your message here" name="message" class="contactUs_form form__input" id="contactUs_frame182_message" type="text" rows="14" wrap="soft"></textarea>
+                  <div class="contactUs_frame182_sendButton">
+                     <p id="labelSend"><input id="insertSend" value="SEND" type="submit"/></p>
+                     <img id="arrowSend" src="images/arrow_left_md.png">
+                  </div>
+               </form>
+            </div>
+            <div class="moveForm">
+               TEXT US
             </div>
          </div>
       </container>

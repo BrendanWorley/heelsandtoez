@@ -448,7 +448,22 @@ function updateRect24() {
 }
 
 
-
 //------------------------------------------------------------------------------
+
+//------------------FEEDBACK FORM BEHAVIOR-----------------------------------
+const moveFormButton = document.querySelector('.moveForm');
+const movableForm = document.querySelector('.form');
+const nameFocused = document.getElementById('contactUs_frame182_name');
+
+function moveForm() {
+   movableForm.style.display = 'block';
+   moveFormButton.style.display = 'none';
+   nameFocused.focus();
+}
+
+moveFormButton.addEventListener('click', moveForm);
+
+
+//---------------------------------------------------------------------------
 
   
