@@ -385,11 +385,6 @@ function updateRect24() {
                clientPicture.src = this.imageSource;
                clientContainerA.appendChild(clientPicture);
                
-               const clientQuotes = document.createElement('img');
-               clientQuotes.classList.add('clientQuotes');
-               clientQuotes.src = this.imageQuotes;
-               clientContainerA.appendChild(clientQuotes);
-
                const clientText2 = document.createElement('p');
                clientText2.classList.add('clientText2');
                clientText2.textContent = this.text2;
@@ -402,18 +397,31 @@ function updateRect24() {
          
                const clientContainerB = document.createElement('div');
                clientContainerB.classList.add('clientContainerB');
-         
+                        
                const clientText1 = document.createElement('p');
                clientText1.classList.add('clientText1');
                clientText1.textContent = this.text1;
                clientContainerB.appendChild(clientText1);
          
+               const clientQuotes = document.createElement('img');
+               clientQuotes.classList.add('clientQuotes');
+               clientQuotes.src = this.imageQuotes;
+               
+
                if (this.order === 0 || this.order === 2) {
                   clientContainer.appendChild(clientContainerB);
                   clientContainer.appendChild(clientContainerA);
+                  clientContainer.appendChild(clientQuotes);
                   } else if (this.order === 1) {
                   clientContainer.appendChild(clientContainerA);
                   clientContainer.appendChild(clientContainerB);
+                  clientContainer.appendChild(clientQuotes);
+                  clientQuotes.classList.add('_revertQuotes');
+                  
+               }
+
+               if (this.order === 2) {
+                  clientQuotes.style.opacity = '0';
                }
          
                rect24__frame118.appendChild(clientContainer);
