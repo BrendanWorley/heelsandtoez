@@ -332,6 +332,7 @@ if (smallMenuLinks.length > 0) {
       //------setting up the cliche for Client-object creation------------------
 
 visualViewport.addEventListener('resize', updateRect24);
+document.addEventListener('DOMContentLoaded', updateRect24);
 console.log(visualViewport.width);
 const group1ToBeRemoved = document.querySelector('.rect24__frame118__group1');
 // let clientsList = document.querySelectorAll('.clientContainer');
