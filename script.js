@@ -1,10 +1,3 @@
-
-//---------------SEND BUTTON STYLING----------------------
-/* const labelSend = document.getElementById('labelSend');
-labelSend.style.color = 'rgba(253, 244, 200, 1)';
-labelSend.style.backgroundColor = '#CD7F47'; */
-//--------------------------------------------------------
-
 //--------------------SLIDER -------------------------------
 const slider = document.querySelector('.slider');
 const container = document.querySelector('.slider_container');
@@ -335,8 +328,7 @@ visualViewport.addEventListener('resize', updateRect24);
 document.addEventListener('DOMContentLoaded', updateRect24);
 console.log(visualViewport.width);
 const group1ToBeRemoved = document.querySelector('.rect24__frame118__group1');
-// let clientsList = document.querySelectorAll('.clientContainer');
-// console.log(clientsList.length);  
+
 
 function updateRect24() {
    let clientsList = document.querySelectorAll('.clientContainer');
@@ -353,15 +345,15 @@ function updateRect24() {
 
          
          const clientInputImage = clientInput.children[0].children[0].src;
-         // console.log(clientInputImage);
+         
          const clientInputQuotes = clientInput.children[1].children[0].src;
-         // console.log(clientInputQuotes);
+         
          const clientInputText1 = clientInput.children[2].children[0].innerText;
-         // console.log(clientInputText1);
+         
          const clientInputText2 = clientInput.children[3].children[0].innerText;
-         // console.log(clientInputText2);
+         
          const clientInputText3 = clientInput.children[4].children[0].innerText;
-         // console.log(clientInputText3);
+         
 
          class Client {
             constructor(imageSource, imageQuotes, text1, text2, text3, order) {

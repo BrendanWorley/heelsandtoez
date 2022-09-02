@@ -8,7 +8,7 @@ $name = $_POST['name'];
 $email = $_POST['email'];
 $lastName = $_POST['lastName'];
 $message = $_POST['message'];
-$transitEmail = "ever-legion@yandex.ru";
+$transitEmail = "yourmail@yandex.ru";
 $subjectText = 'You got message from '.$name.' '.$lastName;
 $header = $subjectText;
 
