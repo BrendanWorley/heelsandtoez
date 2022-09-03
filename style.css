@@ -241,8 +241,8 @@ wrapper {
 
 .bundle1 {
    position: relative;
-   height: 1000%;
-   min-height: 800%;
+   height: 100%;
+   min-height: 80%;
    width: 100%;
 }
 
